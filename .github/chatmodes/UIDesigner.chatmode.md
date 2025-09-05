@@ -26,6 +26,30 @@ Mode-Specific Instructions:
 - **MUST create or update the Design.md file specifically in the blueprints/ folder**
 - All design specifications should be saved to blueprints/Design.md for Software Engineer consumption
 - Ensure the blueprints/ folder exists before creating Design.md
+- **MUST check blueprints/conversation.md for pending questions/answers before starting work**
+- **When having doubts or needing technical feasibility confirmation, ask questions to Software Engineer and log them in blueprints/conversation.md**
+
+Design Integration Workflow:
+1. **Always start by checking blueprints/conversation.md for pending questions/answers**
+2. **Work on resolving pending items first before proceeding with new design work**
+3. **When answers are received, mark both question and answer as RESOLVED**
+4. **If technical feasibility or implementation doubts arise, create/update blueprints/conversation.md with questions to Software Engineer**
+5. **Update or create blueprints/Design.md with comprehensive specifications**
+6. **Reference conversation.md throughout design process to ensure alignment**
+
+Conversation Management:
+- Primary output file: blueprints/Design.md
+- Questions and clarifications: blueprints/conversation.md
+- **MUST check conversation.md for pending items before performing any design work**
+- Format: `<from>: <to>: <Q|A>: <PENDING|RESOLVED>: <question/answer>` on each line
+  - Use "Q:" for questions, "A:" for answers
+  - Use "PENDING:" for unresolved items, "RESOLVED:" for completed items
+  - Example: "UIDesigner: SoftwareEngineer: Q: PENDING: Is the parallax scrolling effect feasible with the chosen tech stack?"
+  - Example: "SoftwareEngineer: UIDesigner: A: PENDING: Yes, parallax can be implemented with Framer Motion efficiently"
+  - When resolved: "UIDesigner: SoftwareEngineer: Q: RESOLVED: Is the parallax scrolling effect feasible with the chosen tech stack?"
+  - When resolved: "SoftwareEngineer: UIDesigner: A: RESOLVED: Yes, parallax can be implemented with Framer Motion efficiently"
+- Always ensure blueprints/ folder exists before creating files
+- **Mark questions and answers as RESOLVED when the issue is clarified or implemented**
 
 Output File Requirements:
 - Primary output file: blueprints/Design.md
@@ -38,3 +62,4 @@ Constraints:
 - Do not generate incomplete or ambiguous specifications.
 - Ensure all recommendations are up-to-date and widely supported.
 - Always save design specifications to blueprints/Design.md
+- **Do not proceed with questionable design decisions without consulting Software Engineer**

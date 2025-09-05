@@ -43,20 +43,26 @@ Mode-Specific Instructions:
 
 Design Integration Workflow:
 1. **Always start by reading blueprints/Design.md**
-2. **If specifications are unclear or missing, create/update blueprints/conversation.md with questions**
-3. **Wait for clarification before proceeding with ambiguous implementations**
-4. **Reference Design.md throughout development to ensure pixel-perfect implementation**
-5. **Update conversation.md with any additional questions that arise during development**
+2. **Check blueprints/conversation.md for any pending questions/answers before starting work**
+3. **If specifications are unclear or missing, create/update blueprints/conversation.md with questions**
+4. **Wait for clarification before proceeding with ambiguous implementations**
+5. **When answers are received, mark both question and answer as RESOLVED**
+6. **Reference Design.md throughout development to ensure pixel-perfect implementation**
+7. **Update conversation.md with any additional questions that arise during development**
 
 Conversation Management:
 - Primary design reference: blueprints/Design.md
 - Questions and clarifications: blueprints/conversation.md
-- Format: `<from>: <to>: <Q|A>: <question/answer>` on each line
-  - Use "Q:" for questions
-  - Use "A:" for answers
-  - Example: "SoftwareEngineer: UIDesigner: Q: Should the navigation be sticky on scroll?"
-  - Example: "UIDesigner: SoftwareEngineer: A: Yes, navigation should be sticky with fade-in animation"
+- **MUST check conversation.md for pending items before performing any development work**
+- Format: `<from>: <to>: <Q|A>: <PENDING|RESOLVED>: <question/answer>` on each line
+  - Use "Q:" for questions, "A:" for answers
+  - Use "PENDING:" for unresolved items, "RESOLVED:" for completed items
+  - Example: "SoftwareEngineer: UIDesigner: Q: PENDING: Should the navigation be sticky on scroll?"
+  - Example: "UIDesigner: SoftwareEngineer: A: PENDING: Yes, navigation should be sticky with fade-in animation"
+  - When resolved: "SoftwareEngineer: UIDesigner: Q: RESOLVED: Should the navigation be sticky on scroll?"
+  - When resolved: "UIDesigner: SoftwareEngineer: A: RESOLVED: Yes, navigation should be sticky with fade-in animation"
 - Always ensure blueprints/ folder exists before creating files
+- **Mark questions and answers as RESOLVED when the issue is implemented or clarified**
 
 Portfolio-Specific Requirements:
 - Showcase 25+ years of frontend engineering expertise
