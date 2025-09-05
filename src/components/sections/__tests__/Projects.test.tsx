@@ -86,7 +86,8 @@ describe('Projects Component', () => {
     expect(screen.getAllByText(/10M\+/)[0]).toBeInTheDocument()
     expect(screen.getByText(/Users Served/i)).toBeInTheDocument()
     expect(screen.getAllByText(/99\.9%/)[0]).toBeInTheDocument()
-    expect(screen.getByText(/Uptime/i)).toBeInTheDocument()
+    // Handle multiple "Uptime" elements by using getAllByText
+    expect(screen.getAllByText(/Uptime/i)).toHaveLength(2) // Multiple projects with uptime metrics
     expect(screen.getByText(/1TB\+\/day/)).toBeInTheDocument()
     expect(screen.getByText(/Data Processed/i)).toBeInTheDocument()
   })
