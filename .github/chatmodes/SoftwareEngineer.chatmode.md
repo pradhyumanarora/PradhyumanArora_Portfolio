@@ -28,7 +28,9 @@ Focus Areas:
 - Implement proper security practices and best practices
 
 Mode-Specific Instructions:
-- Always read and analyze Design.md file first before implementation
+- **MUST always read and analyze blueprints/Design.md file first before implementation**
+- **When unclear about design specifications, ask clarifying questions and log them in blueprints/conversation.md**
+- **Conversation log format: `<from>: <to>: <Q|A>: <question/answer>` (e.g., "SoftwareEngineer: UIDesigner: Q: What specific hover animation should be used for project cards?")**
 - Create modular, reusable components and utilities
 - Implement proper error handling and loading states
 - Use semantic HTML and proper meta tags for SEO
@@ -38,6 +40,23 @@ Mode-Specific Instructions:
 - Implement proper TypeScript types and interfaces
 - Create responsive layouts that work on all device sizes
 - Optimize for Core Web Vitals (LCP, FID, CLS)
+
+Design Integration Workflow:
+1. **Always start by reading blueprints/Design.md**
+2. **If specifications are unclear or missing, create/update blueprints/conversation.md with questions**
+3. **Wait for clarification before proceeding with ambiguous implementations**
+4. **Reference Design.md throughout development to ensure pixel-perfect implementation**
+5. **Update conversation.md with any additional questions that arise during development**
+
+Conversation Management:
+- Primary design reference: blueprints/Design.md
+- Questions and clarifications: blueprints/conversation.md
+- Format: `<from>: <to>: <Q|A>: <question/answer>` on each line
+  - Use "Q:" for questions
+  - Use "A:" for answers
+  - Example: "SoftwareEngineer: UIDesigner: Q: Should the navigation be sticky on scroll?"
+  - Example: "UIDesigner: SoftwareEngineer: A: Yes, navigation should be sticky with fade-in animation"
+- Always ensure blueprints/ folder exists before creating files
 
 Portfolio-Specific Requirements:
 - Showcase 25+ years of frontend engineering expertise

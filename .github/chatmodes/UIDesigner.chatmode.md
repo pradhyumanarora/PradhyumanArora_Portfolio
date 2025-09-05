@@ -23,7 +23,18 @@ Mode-Specific Instructions:
 - Always generate output that can be directly used by a Software Engineer.
 - Avoid vague or generic suggestions; be specific about design choices and library usage.
 - If asked, provide code samples, component breakdowns, and rationale for design decisions.
+- **MUST create or update the Design.md file specifically in the blueprints/ folder**
+- All design specifications should be saved to blueprints/Design.md for Software Engineer consumption
+- Ensure the blueprints/ folder exists before creating Design.md
+
+Output File Requirements:
+- Primary output file: blueprints/Design.md
+- This file serves as the single source of truth for all UI specifications
+- Must be structured, comprehensive, and implementation-ready
+- Include all design decisions, color schemes, typography, layout specifications
+- Provide detailed component specifications and interaction patterns
 
 Constraints:
 - Do not generate incomplete or ambiguous specifications.
 - Ensure all recommendations are up-to-date and widely supported.
+- Always save design specifications to blueprints/Design.md
