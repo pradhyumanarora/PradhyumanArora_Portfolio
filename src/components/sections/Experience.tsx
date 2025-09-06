@@ -18,103 +18,83 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
   {
-    id: 'senior-architect',
-    title: 'Senior Frontend Architect',
-    company: 'TechCorp Industries',
-    location: 'San Francisco, CA',
-    duration: '2020 - Present',
-    period: '4+ years',
+    id: 'microsoft-swe-intern',
+    title: 'Summer SWE Intern',
+    company: 'Microsoft',
+    location: 'Redmond, WA',
+    duration: 'May 2023 - June 2023',
+    period: '2 months',
     description: [
-      'Led digital transformation initiatives for enterprise applications serving 10M+ users',
-      'Architected scalable frontend systems using React, Next.js, and modern build tools',
-      'Mentored 15+ engineers and established engineering best practices across teams',
-      'Reduced page load times by 40% through performance optimization strategies'
+      'Integrated AI capabilities in Microsoft Defender using advanced GPT models',
+      'Collaborated across multiple teams to enhance security threat detection',
+      'Deployed production-ready code for Microsoft employees worldwide',
+      'Reduced system failure rate through intelligent AI model implementation'
     ],
-    technologies: ['React', 'Next.js', 'TypeScript', 'GraphQL', 'AWS', 'Docker', 'Jest'],
+    technologies: ['AI/ML', 'GPT Models', 'Microsoft Defender', 'Python', 'Azure', 'Security APIs'],
     achievements: [
-      'Launched 3 major products generating $50M+ revenue',
-      'Improved team velocity by 60% through automation',
-      'Established design system used across 12 product teams'
+      'Reduced AI model failure rate to 10% through optimization',
+      'Deployed code reaching 200K+ Microsoft employees',
+      'Enhanced threat detection capabilities using 2 GPT models'
     ]
   },
   {
-    id: 'tech-lead',
-    title: 'Technical Lead - Frontend',
-    company: 'InnovateLabs',
-    location: 'Austin, TX',
-    duration: '2017 - 2020',
-    period: '3 years',
+    id: 'microsoft-engage-mentee',
+    title: 'Engage Mentee',
+    company: 'Microsoft',
+    location: 'Remote',
+    duration: 'May 2022',
+    period: '1 month',
     description: [
-      'Built and led high-performance frontend team of 8 engineers',
-      'Spearheaded migration from legacy Angular to modern React architecture',
-      'Implemented CI/CD pipelines reducing deployment time from 2 hours to 15 minutes',
-      'Collaborated with product and design teams on user experience optimization'
+      'Engineered ML-based music recommendation system with intelligent categorization',
+      'Developed facial expression detection system using computer vision',
+      'Built full-stack application with ReactJS frontend and Django backend',
+      'Implemented real-time video analysis with machine learning algorithms'
     ],
-    technologies: ['React', 'Redux', 'Node.js', 'MongoDB', 'Jenkins', 'Kubernetes', 'Sass'],
+    technologies: ['ReactJS', 'Django', 'Machine Learning', 'Computer Vision', 'Python', 'TensorFlow'],
     achievements: [
-      'Successfully migrated 12 legacy applications to modern stack',
-      'Achieved 99.9% uptime for critical customer-facing applications',
-      'Reduced bug reports by 75% through automated testing implementation'
+      'Built music recommendation system with 5 category video suggestions',
+      'Achieved 85% accuracy in facial expression detection',
+      'Successfully integrated ML models with web application'
     ]
   },
   {
-    id: 'senior-dev',
-    title: 'Senior Frontend Developer',
-    company: 'DigitalSolutions Co',
-    location: 'Seattle, WA',
-    duration: '2014 - 2017',
-    period: '3 years',
+    id: 'vit-research-intern',
+    title: 'Research Intern',
+    company: 'Vellore Institute of Technology, Chennai',
+    location: 'Chennai, India',
+    duration: 'June 2022 - July 2022',
+    period: '2 months',
     description: [
-      'Developed responsive web applications for Fortune 500 clients',
-      'Optimized application performance achieving 95+ Lighthouse scores',
-      'Collaborated with UX team to implement pixel-perfect designs',
-      'Mentored junior developers in modern JavaScript and best practices'
+      'Designed innovative Graphical Password Authentication system for accessibility',
+      'Implemented multi-level authentication system for enhanced security',
+      'Conducted research on accessibility solutions for color blind users',
+      'Developed Django-based secure authentication framework'
     ],
-    technologies: ['JavaScript', 'jQuery', 'Gulp', 'Sass', 'PHP', 'MySQL', 'Git'],
+    technologies: ['Django', 'Python', 'Authentication Systems', 'Accessibility', 'Security', 'Research'],
     achievements: [
-      'Delivered 25+ client projects on time and within budget',
-      'Improved client satisfaction scores by 40%',
-      'Developed reusable component library saving 200+ dev hours'
+      'Designed Graphical Password Authentication for Color Blind users',
+      'Implemented 3 Level Authentication system',
+      'Enhanced security protocols for accessible applications'
     ]
   },
   {
-    id: 'fullstack-dev',
-    title: 'Full-Stack Developer',
-    company: 'StartupVenture',
-    location: 'Boulder, CO',
-    duration: '2010 - 2014',
-    period: '4 years',
+    id: 'talakunchi-cybersecurity',
+    title: 'Industrial Program on Cyber Security',
+    company: 'TalaKunchi Networks Pvt Ltd',
+    location: 'India',
+    duration: 'Feb 2022 - Apr 2022',
+    period: '3 months',
     description: [
-      'Built complete web applications from concept to deployment',
-      'Developed RESTful APIs and integrated third-party services',
-      'Implemented responsive designs before it became industry standard',
-      'Participated in all phases of product development lifecycle'
+      'Conducted comprehensive penetration testing on web applications',
+      'Utilized industry-standard security testing tools and frameworks',
+      'Performed vulnerability assessments and security audits',
+      'Mastered advanced penetration testing methodologies'
     ],
-    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Ruby on Rails', 'PostgreSQL', 'Heroku'],
+    technologies: ['Nmap', 'Burp Suite', 'OWASP ZAP', 'Metasploit', 'Penetration Testing', 'Security Auditing'],
     achievements: [
-      'Launched 5 successful web products used by 50K+ users',
-      'Achieved 300% user growth through performance optimizations',
-      'Established development workflows still used by the company'
-    ]
-  },
-  {
-    id: 'web-developer',
-    title: 'Web Developer',
-    company: 'CreativeAgency',
-    location: 'Denver, CO',
-    duration: '2000 - 2010',
-    period: '10 years',
-    description: [
-      'Created websites and web applications for diverse client portfolio',
-      'Pioneered early adoption of web standards and accessibility practices',
-      'Developed custom CMS solutions before WordPress became mainstream',
-      'Led transition from table-based layouts to semantic CSS designs'
-    ],
-    technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Flash', 'Photoshop'],
-    achievements: [
-      'Built 100+ websites for clients across various industries',
-      'Won 3 industry awards for innovative web design',
-      'Trained 20+ designers in web development fundamentals'
+      'Performed penetration testing on 10+ websites',
+      'Mastered Nmap and Metasploit Framework effectively',
+      'Successfully exploited server vulnerabilities for security assessment'
     ]
   }
 ];
@@ -189,12 +169,12 @@ export default function Experience() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <Rocket className="text-stellar-purple w-8 h-8" />
             <h2 className="text-4xl md:text-5xl font-bold text-star-white font-['Orbitron']">
-              Space Missions
+              Professional Journey
             </h2>
           </div>
           <p className="text-xl text-asteroid-gray max-w-2xl mx-auto">
-            A chronological journey through 25+ years of frontend engineering excellence, 
-            from the early web frontier to modern space-age applications
+            From AI integration at Microsoft to cybersecurity research, showcasing expertise 
+            in software engineering, machine learning, and security technologies
           </p>
         </motion.div>
 
@@ -325,10 +305,10 @@ export default function Experience() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           {[
-            { label: 'Years of Experience', value: '25+', icon: Calendar },
-            { label: 'Projects Delivered', value: '150+', icon: Rocket },
-            { label: 'Teams Led', value: '12', icon: Award },
-            { label: 'Technologies Mastered', value: '30+', icon: MapPin }
+            { label: 'Microsoft Roles', value: '2', icon: Calendar },
+            { label: 'AI Models Integrated', value: '2', icon: Rocket },
+            { label: 'Users Reached', value: '200K+', icon: Award },
+            { label: 'Websites Tested', value: '10+', icon: MapPin }
           ].map((stat, index) => (
             <motion.div
               key={index}
