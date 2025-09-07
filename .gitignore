@@ -51,6 +51,7 @@ Thumbs.db
 
 # Development and documentation folders
 .github/
+!.github/workflows/
 docs/
 blueprints/
 .DS_Store

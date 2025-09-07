@@ -1,35 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  basePath: process.env.NODE_ENV === 'production' ? '/PradhyumanArora_Portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/PradhyumanArora_Portfolio/' : '',
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react']
   },
   images: {
+    unoptimized: true, // Required for static export
     formats: ['image/avif', 'image/webp'],
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
-  },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-        ],
-      },
-    ]
-  },
+  }
 }
 
 export default nextConfig
