@@ -24,87 +24,63 @@ interface SkillConnection {
 }
 
 const skillsData: SkillNode[] = [
-  // Frontend Cluster (Stellar Purple)
+  // Frontend Cluster (Stellar Purple) - Left side, well-spaced
   {
     id: 'react',
     label: 'React',
     category: 'frontend',
-    x: 200,
+    x: 150,
     y: 150,
-    connections: ['nextjs', 'typescript', 'tailwind'],
+    connections: ['nextjs', 'typescript'],
     icon: Code,
-    description: 'Expert in React ecosystem with 8+ years building complex applications',
+    description: 'Expert in React ecosystem building complex applications',
     proficiency: 5,
-    experience: '8+ years'
+    experience: '2+ years'
   },
   {
     id: 'nextjs',
     label: 'Next.js',
     category: 'frontend',
-    x: 320,
-    y: 120,
-    connections: ['react', 'vercel', 'typescript'],
+    x: 250,
+    y: 100,
+    connections: ['react', 'typescript', 'vercel'],
     icon: Zap,
     description: 'Full-stack React framework specialist with App Router expertise',
     proficiency: 5,
-    experience: '4+ years'
+    experience: '2+ years'
   },
   {
     id: 'typescript',
     label: 'TypeScript',
     category: 'frontend',
-    x: 260,
-    y: 220,
-    connections: ['react', 'nextjs', 'nodejs'],
+    x: 200,
+    y: 200,
+    connections: ['react', 'nodejs'],
     icon: Code,
     description: 'Advanced TypeScript developer with strong type system design',
     proficiency: 5,
-    experience: '6+ years'
+    experience: '2+ years'
   },
   {
     id: 'tailwind',
     label: 'Tailwind CSS',
     category: 'frontend',
-    x: 140,
+    x: 100,
     y: 200,
-    connections: ['react', 'design'],
+    connections: ['react'],
     icon: Palette,
     description: 'Expert in utility-first CSS with custom design system creation',
     proficiency: 5,
-    experience: '3+ years'
-  },
-  {
-    id: 'vue',
-    label: 'Vue.js',
-    category: 'frontend',
-    x: 180,
-    y: 80,
-    connections: ['nuxt'],
-    icon: Code,
-    description: 'Proficient in Vue ecosystem with Composition API expertise',
-    proficiency: 4,
-    experience: '3+ years'
-  },
-  {
-    id: 'nuxt',
-    label: 'Nuxt.js',
-    category: 'frontend',
-    x: 120,
-    y: 40,
-    connections: ['vue'],
-    icon: Zap,
-    description: 'Vue.js framework for universal applications',
-    proficiency: 4,
     experience: '2+ years'
   },
 
-  // Backend Cluster (Nebula Pink)
+  // Backend Cluster (Nebula Pink) - Right side
   {
     id: 'nodejs',
     label: 'Node.js',
     category: 'backend',
-    x: 450,
-    y: 250,
+    x: 500,
+    y: 200,
     connections: ['typescript', 'mongodb', 'postgresql'],
     icon: Database,
     description: 'Full-stack JavaScript runtime with microservices architecture',
@@ -115,8 +91,8 @@ const skillsData: SkillNode[] = [
     id: 'mongodb',
     label: 'MongoDB',
     category: 'backend',
-    x: 520,
-    y: 180,
+    x: 600,
+    y: 150,
     connections: ['nodejs'],
     icon: Database,
     description: 'NoSQL database design and optimization specialist',
@@ -127,8 +103,8 @@ const skillsData: SkillNode[] = [
     id: 'postgresql',
     label: 'PostgreSQL',
     category: 'backend',
-    x: 480,
-    y: 320,
+    x: 550,
+    y: 280,
     connections: ['nodejs'],
     icon: Database,
     description: 'Relational database expert with complex query optimization',
@@ -139,7 +115,7 @@ const skillsData: SkillNode[] = [
     id: 'python',
     label: 'Python',
     category: 'backend',
-    x: 420,
+    x: 450,
     y: 180,
     connections: ['ai'],
     icon: Code,
@@ -148,14 +124,14 @@ const skillsData: SkillNode[] = [
     experience: '4+ years'
   },
 
-  // Tools Cluster (Solar Gold)
+  // Tools Cluster (Solar Gold) - Bottom area, spread out
   {
     id: 'git',
     label: 'Git',
     category: 'tools',
     x: 150,
-    y: 300,
-    connections: ['github', 'docker'],
+    y: 350,
+    connections: ['github'],
     icon: Code,
     description: 'Advanced Git workflows and version control strategies',
     proficiency: 5,
@@ -165,9 +141,9 @@ const skillsData: SkillNode[] = [
     id: 'github',
     label: 'GitHub',
     category: 'tools',
-    x: 220,
-    y: 350,
-    connections: ['git', 'vercel', 'ci-cd'],
+    x: 250,
+    y: 380,
+    connections: ['git', 'ci-cd', 'vercel'],
     icon: Code,
     description: 'GitHub Actions, project management, and collaboration expert',
     proficiency: 5,
@@ -177,9 +153,9 @@ const skillsData: SkillNode[] = [
     id: 'docker',
     label: 'Docker',
     category: 'tools',
-    x: 80,
-    y: 340,
-    connections: ['git', 'kubernetes'],
+    x: 350,
+    y: 400,
+    connections: ['kubernetes', 'ci-cd'],
     icon: Cloud,
     description: 'Containerization and development environment optimization',
     proficiency: 4,
@@ -189,33 +165,45 @@ const skillsData: SkillNode[] = [
     id: 'kubernetes',
     label: 'Kubernetes',
     category: 'tools',
-    x: 40,
-    y: 280,
-    connections: ['docker', 'aws'],
+    x: 450,
+    y: 380,
+    connections: ['docker', 'azure'],
     icon: Cloud,
     description: 'Container orchestration and cloud-native deployments',
     proficiency: 3,
     experience: '3+ years'
   },
   {
-    id: 'aws',
-    label: 'AWS',
+    id: 'azure',
+    label: 'Azure',
     category: 'tools',
-    x: 100,
-    y: 240,
-    connections: ['kubernetes', 'vercel'],
+    x: 550,
+    y: 350,
+    connections: ['kubernetes'],
     icon: Cloud,
-    description: 'Cloud infrastructure and serverless architecture',
+    description: 'Microsoft Azure cloud infrastructure and AI services',
     proficiency: 4,
-    experience: '6+ years'
+    experience: '3+ years'
+  },
+  {
+    id: 'gcp',
+    label: 'Google Cloud',
+    category: 'tools',
+    x: 650,
+    y: 380,
+    connections: ['kubernetes'],
+    icon: Cloud,
+    description: 'Google Cloud Platform services and machine learning tools',
+    proficiency: 3,
+    experience: '2+ years'
   },
   {
     id: 'vercel',
     label: 'Vercel',
     category: 'tools',
-    x: 360,
-    y: 180,
-    connections: ['nextjs', 'github', 'aws'],
+    x: 450,
+    y: 320,
+    connections: ['github', 'ci-cd'],
     icon: Zap,
     description: 'Modern deployment platform with edge computing',
     proficiency: 5,
@@ -225,35 +213,23 @@ const skillsData: SkillNode[] = [
     id: 'ci-cd',
     label: 'CI/CD',
     category: 'tools',
-    x: 280,
-    y: 300,
-    connections: ['github', 'testing'],
+    x: 350,
+    y: 320,
+    connections: ['github', 'vercel', 'docker'],
     icon: Cpu,
     description: 'Automated testing and deployment pipeline expert',
     proficiency: 4,
     experience: '8+ years'
   },
-  {
-    id: 'testing',
-    label: 'Testing',
-    category: 'tools',
-    x: 340,
-    y: 350,
-    connections: ['ci-cd'],
-    icon: Cpu,
-    description: 'Jest, Cypress, Playwright - comprehensive testing strategies',
-    proficiency: 4,
-    experience: '10+ years'
-  },
 
-  // Soft Skills Cluster (Comet Green)
+  // Soft Skills Cluster (Comet Green) - Top area
   {
     id: 'leadership',
     label: 'Leadership',
     category: 'soft',
-    x: 500,
+    x: 600,
     y: 80,
-    connections: ['mentoring', 'communication'],
+    connections: ['mentoring'],
     icon: Users,
     description: 'Leading engineering teams and driving technical vision',
     proficiency: 5,
@@ -263,11 +239,11 @@ const skillsData: SkillNode[] = [
     id: 'mentoring',
     label: 'Mentoring',
     category: 'soft',
-    x: 450,
-    y: 40,
+    x: 500,
+    y: 50,
     connections: ['leadership', 'communication'],
     icon: Users,
-    description: 'Developed 50+ engineers throughout career',
+    description: 'Mentored 10+ college students in software development and career growth',
     proficiency: 5,
     experience: '12+ years'
   },
@@ -275,9 +251,9 @@ const skillsData: SkillNode[] = [
     id: 'communication',
     label: 'Communication',
     category: 'soft',
-    x: 380,
+    x: 400,
     y: 80,
-    connections: ['leadership', 'mentoring', 'design'],
+    connections: ['mentoring'],
     icon: Users,
     description: 'Cross-functional collaboration and technical presentations',
     proficiency: 5,
@@ -287,9 +263,9 @@ const skillsData: SkillNode[] = [
     id: 'design',
     label: 'Design Systems',
     category: 'soft',
-    x: 320,
-    y: 40,
-    connections: ['communication', 'tailwind'],
+    x: 300,
+    y: 50,
+    connections: ['tailwind'],
     icon: Palette,
     description: 'UX/UI collaboration and systematic design thinking',
     proficiency: 4,
@@ -299,9 +275,9 @@ const skillsData: SkillNode[] = [
     id: 'ai',
     label: 'AI Integration',
     category: 'soft',
-    x: 440,
-    y: 120,
-    connections: ['python', 'innovation'],
+    x: 450,
+    y: 100,
+    connections: ['python'],
     icon: Cpu,
     description: 'AI-powered development tools and modern workflows',
     proficiency: 3,
@@ -311,8 +287,8 @@ const skillsData: SkillNode[] = [
     id: 'innovation',
     label: 'Innovation',
     category: 'soft',
-    x: 380,
-    y: 140,
+    x: 350,
+    y: 150,
     connections: ['ai'],
     icon: Star,
     description: 'Driving technical innovation and emerging tech adoption',
@@ -409,8 +385,8 @@ export default function Skills() {
             </h2>
           </div>
           <p className="text-xl text-asteroid-gray max-w-2xl mx-auto">
-            An interactive map of technical expertise spanning 25+ years of frontend engineering,
-            connected like stars in the digital cosmos
+            An interactive map of technical expertise and leadership skills,
+            organized like constellations in the digital cosmos
           </p>
         </motion.div>
 
@@ -446,9 +422,9 @@ export default function Skills() {
           <div className="bg-gradient-to-br from-cosmic-blue/20 to-deep-space/40 rounded-2xl p-8 backdrop-blur-sm border border-moon-silver/10">
             <svg
               ref={svgRef}
-              viewBox="0 0 560 400"
+              viewBox="0 0 800 500"
               className="w-full h-auto"
-              style={{ minHeight: '400px' }}
+              style={{ minHeight: '500px' }}
             >
               {/* Connections */}
               {connections.map((connection, index) => {
@@ -533,7 +509,7 @@ export default function Skills() {
                     {/* Skill Label */}
                     <text
                       x={skill.x}
-                      y={skill.y - 35}
+                      y={skill.y - 28}
                       textAnchor="middle"
                       className="fill-star-white text-xs font-medium"
                       opacity={hoveredSkill && !isHighlighted && !isConnectedToHovered ? 0.5 : 1}
