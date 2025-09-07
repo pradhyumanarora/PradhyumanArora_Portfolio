@@ -48,6 +48,11 @@ next-env.d.ts
 
 # OS generated files
 Thumbs.db
+
+# Development and documentation folders
+.github/
+docs/
+blueprints/
 .DS_Store
 .DS_Store?
 ._*
