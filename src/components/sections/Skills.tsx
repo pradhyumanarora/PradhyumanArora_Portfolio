@@ -442,14 +442,23 @@ export default function Skills() {
                     stroke={isHighlighted ? categoryColors[fromSkill.category] : '#64748B'}
                     strokeWidth={isHighlighted ? 2 : 1}
                     fill="none"
-                    opacity={isHighlighted ? 0.8 : 0.3}
+                    opacity={isHighlighted ? 0.8 : 0.2}
                     strokeDasharray="5,5"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    animate={{ 
+                      pathLength: 1, 
+                      opacity: isHighlighted ? 0.8 : 0.2 
+                    }}
                     transition={{ 
-                      duration: 2,
-                      delay: 0.5 + index * 0.1,
-                      ease: "easeInOut"
+                      pathLength: {
+                        duration: 2,
+                        delay: 0.5 + index * 0.05,
+                        ease: "easeInOut"
+                      },
+                      opacity: {
+                        duration: 0.3,
+                        ease: "easeInOut"
+                      }
                     }}
                   />
                 );
@@ -461,16 +470,37 @@ export default function Skills() {
                 const isHighlighted = hoveredSkill === skill.id;
                 const isConnectedToHovered = hoveredSkill && 
                   isConnected(skill.id, hoveredSkill);
+                const shouldDim = hoveredSkill && !isHighlighted && !isConnectedToHovered;
 
                 return (
                   <g key={skill.id}>
+                    {/* Pulsing Effect - Behind the main circle */}
+                    {isHighlighted && (
+                      <motion.circle
+                        cx={skill.x}
+                        cy={skill.y}
+                        r={30}
+                        fill={categoryColors[skill.category]}
+                        opacity={0.2}
+                        animate={{ 
+                          scale: [1, 1.2, 1],
+                          opacity: [0.2, 0.4, 0.2]
+                        }}
+                        transition={{ 
+                          duration: 1.5,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      />
+                    )}
+
                     {/* Node Circle */}
                     <motion.circle
                       cx={skill.x}
                       cy={skill.y}
                       r={isHighlighted ? 24 : 20}
                       fill={categoryColors[skill.category]}
-                      opacity={hoveredSkill && !isHighlighted && !isConnectedToHovered ? 0.3 : 1}
+                      opacity={shouldDim ? 0.3 : 1}
                       stroke={isHighlighted ? '#F8FAFC' : 'transparent'}
                       strokeWidth={2}
                       className="cursor-pointer"
@@ -478,41 +508,23 @@ export default function Skills() {
                       animate={{ scale: 1 }}
                       transition={{ 
                         duration: 0.5,
-                        delay: 0.8 + index * 0.1,
+                        delay: 0.8 + index * 0.05,
                         type: "spring",
                         stiffness: 200
                       }}
-                      whileHover={{ scale: 1.2 }}
-                      onHoverStart={() => setHoveredSkill(skill.id)}
-                      onHoverEnd={() => setHoveredSkill(null)}
+                      whileHover={{ scale: 1.1 }}
+                      onMouseEnter={() => setHoveredSkill(skill.id)}
+                      onMouseLeave={() => setHoveredSkill(null)}
                       onClick={() => handleSkillClick(skill)}
                     />
-                    
-                    {/* Pulsing Effect */}
-                    {isHighlighted && (
-                      <motion.circle
-                        cx={skill.x}
-                        cy={skill.y}
-                        r={24}
-                        fill={categoryColors[skill.category]}
-                        opacity={0.4}
-                        initial={{ scale: 1 }}
-                        animate={{ scale: 1.5 }}
-                        transition={{ 
-                          duration: 1,
-                          repeat: Infinity,
-                          repeatType: "reverse"
-                        }}
-                      />
-                    )}
 
                     {/* Skill Label */}
                     <text
                       x={skill.x}
                       y={skill.y - 28}
                       textAnchor="middle"
-                      className="fill-star-white text-xs font-medium"
-                      opacity={hoveredSkill && !isHighlighted && !isConnectedToHovered ? 0.5 : 1}
+                      className="fill-star-white text-xs font-medium pointer-events-none"
+                      opacity={shouldDim ? 0.4 : 1}
                     >
                       {skill.label}
                     </text>
