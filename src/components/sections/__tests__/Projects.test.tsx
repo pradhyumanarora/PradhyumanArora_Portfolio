@@ -124,7 +124,7 @@ describe('Projects Component', () => {
     render(<Projects />)
     
     const codeButtons = screen.getAllByText(/Code/i)
-    expect(codeButtons[0]).toHaveAttribute('href', 'https://github.com/username/nexus-platform')
+    expect(codeButtons[0]).toHaveAttribute('href', 'https://github.com/pradhyumanarora/nexus-platform')
     expect(codeButtons[0]).toHaveAttribute('target', '_blank')
     expect(codeButtons[0]).toHaveAttribute('rel', 'noopener noreferrer')
   })

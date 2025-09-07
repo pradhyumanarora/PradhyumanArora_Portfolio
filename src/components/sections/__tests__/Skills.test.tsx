@@ -51,7 +51,7 @@ describe('Skills Component', () => {
     render(<Skills />)
     
     expect(screen.getByText(/Skills Constellation/i)).toBeInTheDocument()
-    expect(screen.getByText(/An interactive map of technical expertise spanning 25\+ years of frontend engineering/i)).toBeInTheDocument()
+    expect(screen.getByText(/An interactive map of technical expertise and leadership skills, organized like constellations in the digital cosmos/i)).toBeInTheDocument()
   })
 
   it('displays skill constellation SVG', () => {
@@ -64,7 +64,7 @@ describe('Skills Component', () => {
   it('shows all skill categories in legend', () => {
     render(<Skills />)
     
-    expect(screen.getAllByText(/Frontend/i)).toHaveLength(2) // One in description, one in legend
+    expect(screen.getByText(/Frontend/i)).toBeInTheDocument()
     expect(screen.getByText(/Backend/i)).toBeInTheDocument()
     expect(screen.getByText(/Tools/i)).toBeInTheDocument()
     expect(screen.getByText(/Soft Skills/i)).toBeInTheDocument()
@@ -196,8 +196,8 @@ describe('Skills Component', () => {
     const categoryElements = document.querySelectorAll('[style*="background-color"]')
     expect(categoryElements.length).toBeGreaterThanOrEqual(4) // Should have at least 4 category indicators
     
-    // Check that skill categories are represented in text (expecting multiple Frontend instances)
-    expect(screen.getAllByText(/Frontend/i)).toHaveLength(2) // One in description, one in legend
+    // Check that skill categories are represented in text  
+    expect(screen.getByText(/Frontend/i)).toBeInTheDocument()
     expect(screen.getByText(/Backend/i)).toBeInTheDocument()
   })
 

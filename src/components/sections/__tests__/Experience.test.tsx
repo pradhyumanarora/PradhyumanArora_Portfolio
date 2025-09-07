@@ -33,79 +33,78 @@ describe('Experience Component', () => {
     render(<Experience />)
     
     // Check if the component renders with space-themed content
-    expect(screen.getByText(/Space Missions/i)).toBeInTheDocument()
-    expect(screen.getByText(/25\+ years of frontend engineering/i)).toBeInTheDocument()
+    expect(screen.getByText(/Professional Journey/i)).toBeInTheDocument()
+    expect(screen.getByText(/From AI integration at Microsoft to cybersecurity research/i)).toBeInTheDocument()
   })
 
   it('displays all experience items correctly', () => {
     render(<Experience />)
     
     // Check for company names and positions from actual component
-    expect(screen.getByText(/TechCorp Industries/i)).toBeInTheDocument()
-    expect(screen.getByText(/Senior Frontend Architect/i)).toBeInTheDocument()
-    expect(screen.getByText(/InnovateLabs/i)).toBeInTheDocument()
-    expect(screen.getByText(/Technical Lead - Frontend/i)).toBeInTheDocument()
-    expect(screen.getByText(/DigitalSolutions Co/i)).toBeInTheDocument()
-    expect(screen.getByText(/Senior Frontend Developer/i)).toBeInTheDocument()
-    expect(screen.getByText(/StartupVenture/i)).toBeInTheDocument()
-    expect(screen.getByText(/Full-Stack Developer/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/Microsoft/i)[0]).toBeInTheDocument()
+    expect(screen.getByText(/Summer SWE Intern/i)).toBeInTheDocument()
+    expect(screen.getByText(/Engage Mentee/i)).toBeInTheDocument()
+    expect(screen.getByText(/Vellore Institute of Technology/i)).toBeInTheDocument()
+    expect(screen.getByText(/Research Intern/i)).toBeInTheDocument()
+    expect(screen.getByText(/TalaKunchi Networks/i)).toBeInTheDocument()
+    expect(screen.getByText(/Industrial Program on Cyber Security/i)).toBeInTheDocument()
   })
 
   it('shows correct experience durations and locations', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/2020 - Present/i)).toBeInTheDocument()
-    expect(screen.getByText(/San Francisco, CA/i)).toBeInTheDocument()
-    expect(screen.getByText(/2017 - 2020/i)).toBeInTheDocument()
-    expect(screen.getByText(/Austin, TX/i)).toBeInTheDocument()
-    expect(screen.getByText(/2014 - 2017/i)).toBeInTheDocument()
-    expect(screen.getByText(/Seattle, WA/i)).toBeInTheDocument()
-    expect(screen.getByText(/2010 - 2014/i)).toBeInTheDocument()
-    expect(screen.getByText(/Boulder, CO/i)).toBeInTheDocument()
+    expect(screen.getByText(/May 2023 - June 2023/i)).toBeInTheDocument()
+    expect(screen.getByText(/Redmond, WA/i)).toBeInTheDocument()
+    expect(screen.getByText(/May 2022/i)).toBeInTheDocument()
+    expect(screen.getByText(/Remote/i)).toBeInTheDocument()
+    expect(screen.getByText(/June 2022 - July 2022/i)).toBeInTheDocument()
+    expect(screen.getByText(/Chennai, India/i)).toBeInTheDocument()
+    expect(screen.getByText(/Feb 2022 - Apr 2022/i)).toBeInTheDocument()
+    // Use more specific selector for India locations
+    expect(screen.getAllByText(/India/i).length).toBeGreaterThan(0)
   })
 
   it('displays technology tags for each role', () => {
     render(<Experience />)
     
     // Check for some key technologies (using getAllByText for technologies that appear multiple times)
-    expect(screen.getAllByText('React')[0]).toBeInTheDocument()
-    expect(screen.getByText('Next.js')).toBeInTheDocument()
-    expect(screen.getByText('TypeScript')).toBeInTheDocument()
-    expect(screen.getByText('GraphQL')).toBeInTheDocument()
-    expect(screen.getByText('AWS')).toBeInTheDocument()
-    expect(screen.getByText('Redux')).toBeInTheDocument()
-    expect(screen.getByText('Node.js')).toBeInTheDocument()
+    expect(screen.getAllByText('Python')[0]).toBeInTheDocument()
+    expect(screen.getByText('AI/ML')).toBeInTheDocument()
+    expect(screen.getByText('ReactJS')).toBeInTheDocument()
+    expect(screen.getAllByText('Django')[0]).toBeInTheDocument()
+    expect(screen.getByText('Azure')).toBeInTheDocument()
+    expect(screen.getByText('Machine Learning')).toBeInTheDocument()
+    expect(screen.getByText('TensorFlow')).toBeInTheDocument()
   })
 
   it('shows achievements for experience items', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/Launched 3 major products generating \$50M\+ revenue/i)).toBeInTheDocument()
-    expect(screen.getByText(/Improved team velocity by 60% through automation/i)).toBeInTheDocument()
-    expect(screen.getByText(/Established design system used across 12 product teams/i)).toBeInTheDocument()
+    expect(screen.getByText(/Reduced AI model failure rate to 10% through optimization/i)).toBeInTheDocument()
+    expect(screen.getByText(/Deployed code reaching 200K\+ Microsoft employees/i)).toBeInTheDocument()
+    expect(screen.getByText(/Built music recommendation system with 5 category video suggestions/i)).toBeInTheDocument()
   })
 
   it('displays job descriptions', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/Led digital transformation initiatives for enterprise applications serving 10M\+ users/i)).toBeInTheDocument()
-    expect(screen.getByText(/Built and led high-performance frontend team of 8 engineers/i)).toBeInTheDocument()
-    expect(screen.getByText(/Architected scalable frontend systems using React, Next\.js, and modern build tools/i)).toBeInTheDocument()
+    expect(screen.getByText(/Integrated AI capabilities in Microsoft Defender using advanced GPT models/i)).toBeInTheDocument()
+    expect(screen.getByText(/Engineered ML-based music recommendation system with intelligent categorization/i)).toBeInTheDocument()
+    expect(screen.getByText(/Designed innovative Graphical Password Authentication system for accessibility/i)).toBeInTheDocument()
   })
 
   it('renders experience statistics', () => {
     render(<Experience />)
     
-    // Handle multiple elements with same text by using getAllByText
-    expect(screen.getAllByText(/25\+/)).toHaveLength(3) // Description, achievements, and stats
-    expect(screen.getByText(/Years of Experience/i)).toBeInTheDocument()
-    expect(screen.getByText(/150\+/)).toBeInTheDocument()
-    expect(screen.getByText(/Projects Delivered/i)).toBeInTheDocument()
-    // Handle multiple "12" elements (achievements and stats)
-    expect(screen.getAllByText(/12/)).toHaveLength(3) // In achievements and stats section
-    expect(screen.getByText(/Teams Led/i)).toBeInTheDocument()
-    expect(screen.getByText(/30\+/)).toBeInTheDocument()
-    expect(screen.getByText(/Technologies Mastered/i)).toBeInTheDocument()
+    // Check for actual statistics in the component
+    expect(screen.getByText(/Microsoft Roles/i)).toBeInTheDocument()
+    // Use getAllByText for duplicate values
+    expect(screen.getAllByText(/2/)[0]).toBeInTheDocument() // Microsoft Roles value
+    expect(screen.getByText(/AI Models Integrated/i)).toBeInTheDocument()
+    expect(screen.getByText(/Users Reached/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/200K\+/i).length).toBeGreaterThan(0)
+    expect(screen.getByText(/Websites Tested/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/10\+/)[0]).toBeInTheDocument()
   })
 
   it('has proper section structure', () => {
@@ -118,9 +117,9 @@ describe('Experience Component', () => {
   it('displays timeline structure correctly', () => {
     render(<Experience />)
     
-    // Check for timeline elements
-    const timelineItems = screen.getAllByText(/years?/i)
-    expect(timelineItems.length).toBeGreaterThan(0)
+    // Check for timeline elements using a more specific selector
+    const timelineElements = document.querySelectorAll('[class*="bg-stellar-purple rounded-full"]')
+    expect(timelineElements.length).toBeGreaterThan(0)
   })
 
   it('shows holographic card design elements', () => {
@@ -142,27 +141,26 @@ describe('Experience Component', () => {
   it('displays period information for each role', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/4\+ years/i)).toBeInTheDocument()
-    // Handle multiple elements with same text by using getAllByText
-    expect(screen.getAllByText(/3 years/i)).toHaveLength(2) // Multiple roles with same duration
-    expect(screen.getByText(/4 years/i)).toBeInTheDocument() // FullStack developer role
-    expect(screen.getByText(/10 years/i)).toBeInTheDocument() // Web developer role
+    expect(screen.getAllByText(/2 months/i)).toHaveLength(2) // Microsoft roles
+    expect(screen.getByText(/1 month/i)).toBeInTheDocument()
+    expect(screen.getByText(/3 months/i)).toBeInTheDocument()
   })
 
   it('shows performance metrics and achievements', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/40% through performance optimization/i)).toBeInTheDocument()
-    expect(screen.getByText(/2 hours to 15 minutes/i)).toBeInTheDocument()
-    // Handle multiple 40% elements by using getAllByText
-    expect(screen.getAllByText(/40%/i)).toHaveLength(2) // Performance optimization and client satisfaction
+    expect(screen.getByText(/10% through optimization/i)).toBeInTheDocument()
+    expect(screen.getByText(/85% accuracy in facial expression detection/i)).toBeInTheDocument()
+    // Check for actual achievement percentages
+    expect(screen.getByText(/10%/i)).toBeInTheDocument()
+    expect(screen.getByText(/85%/i)).toBeInTheDocument()
   })
 
-  it('handles accessibility with proper space missions heading', () => {
+  it('handles accessibility with proper experience heading', () => {
     render(<Experience />)
     
     // Check for proper heading hierarchy with actual heading text
-    const mainHeading = screen.getByRole('heading', { level: 2, name: /Space Missions/i })
+    const mainHeading = screen.getByRole('heading', { level: 2, name: /Professional Journey/i })
     expect(mainHeading).toBeInTheDocument()
     
     // Check for proper list structures
@@ -173,19 +171,19 @@ describe('Experience Component', () => {
   it('displays comprehensive technology stack', () => {
     render(<Experience />)
     
-    // Check for technologies that appear once
-    expect(screen.getByText('Next.js')).toBeInTheDocument()
-    expect(screen.getByText('TypeScript')).toBeInTheDocument()
-    expect(screen.getByText('GraphQL')).toBeInTheDocument()
-    expect(screen.getByText('AWS')).toBeInTheDocument()
-    expect(screen.getByText('Docker')).toBeInTheDocument()
-    expect(screen.getByText('Jest')).toBeInTheDocument()
-    expect(screen.getByText('Redux')).toBeInTheDocument()
-    expect(screen.getByText('Node.js')).toBeInTheDocument()
+    // Check for technologies that appear in the actual component (use getAllByText for duplicates)
+    expect(screen.getAllByText('Python')[0]).toBeInTheDocument()
+    expect(screen.getByText('AI/ML')).toBeInTheDocument()
+    expect(screen.getByText('Azure')).toBeInTheDocument()
+    expect(screen.getByText('ReactJS')).toBeInTheDocument()
+    expect(screen.getAllByText('Django')[0]).toBeInTheDocument()
+    expect(screen.getByText('TensorFlow')).toBeInTheDocument()
+    expect(screen.getByText('Machine Learning')).toBeInTheDocument()
+    expect(screen.getByText('Computer Vision')).toBeInTheDocument()
     
-    // Check for technologies that may appear multiple times
-    expect(screen.getAllByText('React').length).toBeGreaterThan(0)
-    expect(screen.getAllByText('JavaScript').length).toBeGreaterThan(0)
+    // Check for security technologies
+    expect(screen.getByText('Nmap')).toBeInTheDocument()
+    expect(screen.getByText('Burp Suite')).toBeInTheDocument()
   })
 
   it('shows space-themed animation elements', () => {
@@ -203,25 +201,26 @@ describe('Experience Component', () => {
   it('displays early career information correctly', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/CreativeAgency/i)).toBeInTheDocument()
-    expect(screen.getByText(/Web Developer/i)).toBeInTheDocument()
-    expect(screen.getByText(/2000 - 2010/i)).toBeInTheDocument()
-    expect(screen.getByText(/Denver, CO/i)).toBeInTheDocument()
+    expect(screen.getByText(/TalaKunchi Networks/i)).toBeInTheDocument()
+    expect(screen.getByText(/Industrial Program on Cyber Security/i)).toBeInTheDocument()
+    expect(screen.getByText(/Feb 2022 - Apr 2022/i)).toBeInTheDocument()
+    // Use more specific selector for India locations
+    expect(screen.getAllByText(/India/i).length).toBeGreaterThan(0)
   })
 
   it('shows mid-career progression correctly', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/StartupVenture/i)).toBeInTheDocument()
-    expect(screen.getByText(/Full-Stack Developer/i)).toBeInTheDocument()
-    expect(screen.getByText(/2010 - 2014/i)).toBeInTheDocument()
+    expect(screen.getByText(/Vellore Institute of Technology/i)).toBeInTheDocument()
+    expect(screen.getByText(/Research Intern/i)).toBeInTheDocument()
+    expect(screen.getByText(/June 2022 - July 2022/i)).toBeInTheDocument()
   })
 
   it('displays senior-level roles', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/Technical Lead - Frontend/i)).toBeInTheDocument()
-    expect(screen.getByText(/Senior Frontend Architect/i)).toBeInTheDocument()
+    expect(screen.getByText(/Summer SWE Intern/i)).toBeInTheDocument()
+    expect(screen.getByText(/Research Intern/i)).toBeInTheDocument()
   })
 
   it('handles experience card interactions', async () => {
@@ -244,23 +243,23 @@ describe('Experience Component', () => {
     render(<Experience />)
     
     // Should show career timeline spans
-    expect(screen.getByText(/2020 - Present/)).toBeInTheDocument()
-    expect(screen.getByText(/Present/i)).toBeInTheDocument()
+    expect(screen.getByText(/May 2023 - June 2023/)).toBeInTheDocument()
+    expect(screen.getByText(/May 2022/)).toBeInTheDocument()
   })
 
   it('shows leadership experience', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/Mentored 15\+ engineers/i)).toBeInTheDocument()
-    expect(screen.getByText(/Built and led high-performance frontend team/i)).toBeInTheDocument()
-    expect(screen.getByText(/Teams Led/i)).toBeInTheDocument()
+    expect(screen.getByText(/Microsoft Roles/i)).toBeInTheDocument()
+    expect(screen.getByText(/AI Models Integrated/i)).toBeInTheDocument()
+    expect(screen.getByText(/Users Reached/i)).toBeInTheDocument()
   })
 
   it('displays business impact metrics', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/\$50M\+ revenue/i)).toBeInTheDocument()
-    expect(screen.getByText(/10M\+ users/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/200K\+/i).length).toBeGreaterThan(0) // Achievement and stat
+    expect(screen.getByText(/Users Reached/i)).toBeInTheDocument()
     // Check for general statistics section
     const statsElements = document.querySelectorAll('[class*="text-center"], [class*="statistic"]')
     expect(statsElements.length).toBeGreaterThan(0)
@@ -269,8 +268,8 @@ describe('Experience Component', () => {
   it('shows technical achievements', () => {
     render(<Experience />)
     
-    expect(screen.getByText(/Reduced page load times by 40%/i)).toBeInTheDocument()
-    expect(screen.getByText(/reducing deployment time from 2 hours to 15 minutes/i)).toBeInTheDocument()
+    expect(screen.getByText(/Reduced AI model failure rate to 10%/i)).toBeInTheDocument()
+    expect(screen.getByText(/Deployed code reaching 200K\+ Microsoft employees/i)).toBeInTheDocument()
     // Check for performance improvements in general
     const performanceElements = document.querySelectorAll('[class*="achievement"], [class*="metric"]')
     expect(performanceElements.length).toBeGreaterThanOrEqual(0)
@@ -279,12 +278,12 @@ describe('Experience Component', () => {
   it('displays comprehensive skill evolution', () => {
     render(<Experience />)
     
-    // Should show evolution from basic web technologies to modern stack
-    expect(screen.getByText('HTML')).toBeInTheDocument()
-    expect(screen.getByText('CSS')).toBeInTheDocument()
-    expect(screen.getAllByText('JavaScript')[0]).toBeInTheDocument()
-    expect(screen.getAllByText('React')[0]).toBeInTheDocument()
-    expect(screen.getByText('Next.js')).toBeInTheDocument()
+    // Should show evolution from basic technologies to advanced stack (use getAllByText for duplicates)
+    expect(screen.getByText('AI/ML')).toBeInTheDocument()
+    expect(screen.getAllByText('Python')[0]).toBeInTheDocument()
+    expect(screen.getByText('ReactJS')).toBeInTheDocument()
+    expect(screen.getAllByText('Django')[0]).toBeInTheDocument()
+    expect(screen.getByText('Machine Learning')).toBeInTheDocument()
   })
 
   it('handles space-themed visual elements', () => {

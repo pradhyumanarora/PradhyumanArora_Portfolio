@@ -194,9 +194,9 @@ describe('Hero Component', () => {
     expect(emailLink).toBeInTheDocument()
     
     // Check for proper href attributes
-    expect(githubLink).toHaveAttribute('href', 'https://github.com/yourusername')
-    expect(linkedinLink).toHaveAttribute('href', 'https://linkedin.com/in/yourusername')
-    expect(emailLink).toHaveAttribute('href', 'mailto:your.email@example.com')
+    expect(githubLink).toHaveAttribute('href', 'https://github.com/pradhyumanarora')
+    expect(linkedinLink).toHaveAttribute('href', 'https://www.linkedin.com/in/pradhyumanarora/')
+    expect(emailLink).toHaveAttribute('href', 'mailto:arorapradhyuman@gmail.com')
   })
 
   it('handles complete typewriter text completion', async () => {

@@ -266,7 +266,7 @@ describe('Contact Component', () => {
     render(<Contact />)
     
     expect(screen.getByText(/Command Center Info/i)).toBeInTheDocument()
-    expect(screen.getByText(/commander@spacestation\.dev/i)).toBeInTheDocument()
+    expect(screen.getByText(/arorapradhyuman@gmail\.com/i)).toBeInTheDocument()
     expect(screen.getByText(/\+1 \(555\) SPACE-DEV/i)).toBeInTheDocument()
     expect(screen.getByText(/Earth Orbit • Remote Operations/i)).toBeInTheDocument()
   })
@@ -412,8 +412,8 @@ describe('Contact Component', () => {
     const githubLink = screen.getByRole('link', { name: /github/i })
     const linkedinLink = screen.getByRole('link', { name: /linkedin/i })
     
-    expect(githubLink).toHaveAttribute('href', 'https://github.com')
-    expect(linkedinLink).toHaveAttribute('href', 'https://linkedin.com')
+    expect(githubLink).toHaveAttribute('href', 'https://github.com/pradhyumanarora')
+    expect(linkedinLink).toHaveAttribute('href', 'https://www.linkedin.com/in/pradhyumanarora/')
     expect(githubLink).toHaveAttribute('target', '_blank')
     expect(linkedinLink).toHaveAttribute('target', '_blank')
   })

@@ -69,7 +69,7 @@ const projects: ProjectData[] = [
     ],
     links: {
       live: 'https://nexus-commerce.demo',
-      github: 'https://github.com/username/nexus-platform',
+      github: 'https://github.com/pradhyumanarora/nexus-platform',
       demo: 'https://demo.nexus-commerce.io'
     },
     status: 'production',
@@ -107,7 +107,7 @@ const projects: ProjectData[] = [
     ],
     links: {
       live: 'https://quantum-analytics.demo',
-      github: 'https://github.com/username/quantum-analytics'
+      github: 'https://github.com/pradhyumanarora/quantum-analytics'
     },
     status: 'production',
     year: '2023'
@@ -144,7 +144,7 @@ const projects: ProjectData[] = [
     ],
     links: {
       live: 'https://neural-cms.demo',
-      github: 'https://github.com/username/neural-cms',
+      github: 'https://github.com/pradhyumanarora/neural-cms',
       demo: 'https://demo.neural-cms.io'
     },
     status: 'beta',
@@ -182,7 +182,7 @@ const projects: ProjectData[] = [
     ],
     links: {
       live: 'https://spectrum-ui.design',
-      github: 'https://github.com/username/spectrum-ui'
+      github: 'https://github.com/pradhyumanarora/spectrum-ui'
     },
     status: 'production',
     year: '2023'

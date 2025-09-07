@@ -118,28 +118,28 @@ export default function Contact() {
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com',
+      url: 'https://github.com/pradhyumanarora',
       color: 'text-star-white hover:text-nebula-purple',
       description: 'Code Repository'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com',
+      url: 'https://www.linkedin.com/in/pradhyumanarora/',
       color: 'text-star-white hover:text-cosmic-blue',
       description: 'Professional Network'
     },
     {
       name: 'Twitter',
       icon: Twitter,
-      url: 'https://twitter.com',
+      url: 'https://x.com/arorapradhyuman',
       color: 'text-star-white hover:text-solar-yellow',
       description: 'Communication Stream'
     },
     {
       name: 'Email',
       icon: Mail,
-      url: 'mailto:commander@spacestation.dev',
+      url: 'mailto:arorapradhyuman@gmail.com',
       color: 'text-star-white hover:text-green-400',
       description: 'Direct Channel'
     }
@@ -439,7 +439,7 @@ export default function Contact() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-asteroid-gray">
                   <Mail className="w-4 h-4 text-nebula-purple" />
-                  <span className="text-sm">commander@spacestation.dev</span>
+                  <span className="text-sm">arorapradhyuman@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-asteroid-gray">
                   <Phone className="w-4 h-4 text-solar-yellow" />
