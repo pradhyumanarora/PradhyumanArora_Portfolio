@@ -216,9 +216,9 @@ export default function Experience() {
             </h2>
           </div>
           <p className="text-xl text-asteroid-gray max-w-2xl mx-auto">
-            From building high-throughput cloud infrastructure at Microsoft Defender for Cloud Apps
-            to AI, distributed systems, and security research, showcasing expertise across backend
-            engineering, cloud platforms, and applied machine learning
+            Two years building production cloud infrastructure and security products at
+            Microsoft, with earlier work spanning full-stack development, applied AI, and
+            security research.
           </p>
         </motion.div>
 
@@ -290,7 +290,7 @@ export default function Experience() {
                   <div className="mb-4">
                     <h4 className="text-star-white font-semibold mb-2 flex items-center gap-2">
                       <Award className="w-4 h-4 text-comet-green" />
-                      Mission Objectives
+                      Key Contributions
                     </h4>
                     <ul className="space-y-1">
                       {item.description.map((desc, idx) => (
@@ -304,7 +304,7 @@ export default function Experience() {
 
                   {/* Mission Achievements */}
                   <div className="mb-4">
-                    <h4 className="text-star-white font-semibold mb-2">Mission Success</h4>
+                    <h4 className="text-star-white font-semibold mb-2">Impact</h4>
                     <ul className="space-y-1">
                       {item.achievements.map((achievement, idx) => (
                         <li key={idx} className="text-comet-green text-sm flex items-start gap-2">
@@ -317,7 +317,7 @@ export default function Experience() {
 
                   {/* Technology Equipment */}
                   <div>
-                    <h4 className="text-star-white font-semibold mb-2">Mission Equipment</h4>
+                    <h4 className="text-star-white font-semibold mb-2">Tech Stack</h4>
                     <div className="flex flex-wrap gap-2">
                       {item.technologies.map((tech, idx) => (
                         <motion.span
