@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: 'Pradhyuman Arora | Software Engineer',
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="antialiased">
+        <GoogleAnalytics />
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
