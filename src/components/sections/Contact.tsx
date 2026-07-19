@@ -51,19 +51,19 @@ export default function Contact() {
     const newErrors: FormErrors = {}
     
     if (!formData.name.trim()) {
-      newErrors.name = 'Commander name required for identification'
+      newErrors.name = 'Please enter your name'
     }
     
     if (!formData.email.trim()) {
-      newErrors.email = 'Communication channel required'
+      newErrors.email = 'Please enter your email'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Invalid communication frequency'
+      newErrors.email = 'Please enter a valid email address'
     }
     
     if (!formData.message.trim()) {
-      newErrors.message = 'Mission briefing cannot be empty'
+      newErrors.message = 'Please enter a message'
     } else if (formData.message.trim().length < 20) {
-      newErrors.message = 'Mission briefing requires minimum 20 characters'
+      newErrors.message = 'Message should be at least 20 characters'
     }
     
     setErrors(newErrors)
@@ -120,28 +120,28 @@ export default function Contact() {
       icon: Github,
       url: 'https://github.com/pradhyumanarora',
       color: 'text-star-white hover:text-nebula-purple',
-      description: 'Code Repository'
+      description: 'Code & projects'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
       url: 'https://www.linkedin.com/in/pradhyumanarora/',
       color: 'text-star-white hover:text-cosmic-blue',
-      description: 'Professional Network'
+      description: 'Professional profile'
     },
     {
       name: 'Twitter',
       icon: Twitter,
       url: 'https://x.com/arorapradhyuman',
       color: 'text-star-white hover:text-solar-yellow',
-      description: 'Communication Stream'
+      description: 'Updates & thoughts'
     },
     {
       name: 'Email',
       icon: Mail,
-      url: 'mailto:arorapradhyuman@gmail.com',
+      url: 'mailto:pradhyumanarora@gmail.com',
       color: 'text-star-white hover:text-green-400',
-      description: 'Direct Channel'
+      description: 'Direct contact'
     }
   ]
 
@@ -184,11 +184,11 @@ export default function Contact() {
               WebkitTextFillColor: 'transparent'
             }}
           >
-            Mission Control Center
+            Get in Touch
           </motion.h2>
           <p className="text-lg text-asteroid-gray max-w-3xl mx-auto leading-relaxed">
-            Initiate contact protocol through the space command center interface.
-            All communications are encrypted and transmitted via quantum channels.
+            Interested in working together or have a question? Send me a message and
+            I'll get back to you as soon as I can.
           </p>
         </motion.div>
 
@@ -213,11 +213,11 @@ export default function Contact() {
                 <div className="flex items-center justify-between mb-8 pb-4 border-b border-asteroid-gray/20">
                   <div className="flex items-center gap-3">
                     <Radio className="w-6 h-6 text-nebula-purple animate-pulse" />
-                    <h3 className="text-2xl font-display font-bold text-star-white">Command Console</h3>
+                    <h3 className="text-2xl font-display font-bold text-star-white">Send a Message</h3>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-green-400">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                    ONLINE
+                    AVAILABLE
                   </div>
                 </div>
 
@@ -229,7 +229,7 @@ export default function Contact() {
                     className="mb-6 p-4 bg-green-400/10 border border-green-400/30 rounded-lg flex items-center gap-3"
                   >
                     <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-green-400">Mission briefing received! Response incoming via quantum channel.</span>
+                    <span className="text-green-400">Thanks for reaching out! I'll get back to you soon.</span>
                   </motion.div>
                 )}
 
@@ -240,7 +240,7 @@ export default function Contact() {
                     className="mb-6 p-4 bg-red-400/10 border border-red-400/30 rounded-lg flex items-center gap-3"
                   >
                     <AlertCircle className="w-5 h-5 text-red-400" />
-                    <span className="text-red-400">Communication error. Please retry transmission.</span>
+                    <span className="text-red-400">Something went wrong. Please try again.</span>
                   </motion.div>
                 )}
 
@@ -250,7 +250,7 @@ export default function Contact() {
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-star-white flex items-center gap-2">
                         <Zap className="w-4 h-4 text-nebula-purple" />
-                        Commander Name
+                        Name
                       </label>
                       <div className="relative">
                         <input
@@ -266,7 +266,7 @@ export default function Contact() {
                                 ? 'border-nebula-purple focus:border-nebula-purple' 
                                 : 'border-asteroid-gray/30 focus:border-cosmic-blue'
                           } rounded-lg text-star-white placeholder-asteroid-gray/60 focus:outline-none focus:ring-2 focus:ring-current/20 transition-all`}
-                          placeholder="Enter your identification..."
+                          placeholder="Your name..."
                         />
                         {focusedField === 'name' && (
                           <div className="absolute inset-0 rounded-lg bg-nebula-purple/10 pointer-events-none animate-pulse" />
@@ -284,7 +284,7 @@ export default function Contact() {
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-star-white flex items-center gap-2">
                         <Mail className="w-4 h-4 text-cosmic-blue" />
-                        Communication Channel
+                        Email
                       </label>
                       <div className="relative">
                         <input
@@ -300,7 +300,7 @@ export default function Contact() {
                                 ? 'border-cosmic-blue focus:border-cosmic-blue' 
                                 : 'border-asteroid-gray/30 focus:border-cosmic-blue'
                           } rounded-lg text-star-white placeholder-asteroid-gray/60 focus:outline-none focus:ring-2 focus:ring-current/20 transition-all`}
-                          placeholder="commander@starship.space"
+                          placeholder="you@example.com"
                         />
                         {focusedField === 'email' && (
                           <div className="absolute inset-0 rounded-lg bg-cosmic-blue/10 pointer-events-none animate-pulse" />
@@ -326,7 +326,7 @@ export default function Contact() {
                         onFocus={() => setFocusedField('company')}
                         onBlur={() => setFocusedField(null)}
                         className="w-full px-4 py-3 bg-cosmic-blue/5 border border-asteroid-gray/30 focus:border-solar-yellow rounded-lg text-star-white placeholder-asteroid-gray/60 focus:outline-none focus:ring-2 focus:ring-solar-yellow/20 transition-all"
-                        placeholder="Starfleet Command (optional)"
+                        placeholder="Company (optional)"
                       />
                     </div>
 
@@ -348,13 +348,13 @@ export default function Contact() {
 
                   {/* Subject Field */}
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-star-white">Mission Subject</label>
+                    <label className="text-sm font-medium text-star-white">Subject</label>
                     <input
                       type="text"
                       value={formData.subject}
                       onChange={(e) => handleInputChange('subject', e.target.value)}
                       className="w-full px-4 py-3 bg-cosmic-blue/5 border border-asteroid-gray/30 focus:border-solar-yellow rounded-lg text-star-white placeholder-asteroid-gray/60 focus:outline-none focus:ring-2 focus:ring-solar-yellow/20 transition-all"
-                      placeholder="Brief mission title..."
+                      placeholder="What's this about?"
                     />
                   </div>
 
@@ -362,7 +362,7 @@ export default function Contact() {
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-star-white flex items-center gap-2">
                       <Radio className="w-4 h-4 text-solar-yellow" />
-                      Mission Briefing
+                      Message
                     </label>
                     <div className="relative">
                       <textarea
@@ -378,7 +378,7 @@ export default function Contact() {
                               ? 'border-solar-yellow focus:border-solar-yellow' 
                               : 'border-asteroid-gray/30 focus:border-cosmic-blue'
                         } rounded-lg text-star-white placeholder-asteroid-gray/60 focus:outline-none focus:ring-2 focus:ring-current/20 transition-all resize-none`}
-                        placeholder="Transmit your mission details, project requirements, or collaboration proposals..."
+                        placeholder="Tell me about your project, role, or how I can help..."
                       />
                       {focusedField === 'message' && (
                         <div className="absolute inset-0 rounded-lg bg-solar-yellow/10 pointer-events-none animate-pulse" />
@@ -408,12 +408,12 @@ export default function Contact() {
                     {isSubmitting ? (
                       <>
                         <div className="w-5 h-5 border-2 border-star-white/30 border-t-star-white rounded-full animate-spin" />
-                        Transmitting...
+                        Sending...
                       </>
                     ) : (
                       <>
                         <Send className="w-5 h-5" />
-                        Initiate Transmission
+                        Send Message
                       </>
                     )}
                   </motion.button>
@@ -422,7 +422,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Mission Control Panel (Contact Info & Social) */}
+          {/* Contact Info & Social Panel */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -434,27 +434,27 @@ export default function Contact() {
             <div className="glass-morphism rounded-2xl p-6 border border-cosmic-blue/20">
               <h3 className="text-xl font-display font-bold text-star-white mb-6 flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-cosmic-blue" />
-                Command Center Info
+                Contact Info
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-asteroid-gray">
                   <Mail className="w-4 h-4 text-nebula-purple" />
-                  <span className="text-sm">arorapradhyuman@gmail.com</span>
+                  <span className="text-sm">pradhyumanarora@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-asteroid-gray">
                   <Phone className="w-4 h-4 text-solar-yellow" />
-                  <span className="text-sm">+1 (555) SPACE-DEV</span>
+                  <span className="text-sm">+91 84398 03020</span>
                 </div>
                 <div className="flex items-center gap-3 text-asteroid-gray">
                   <MapPin className="w-4 h-4 text-cosmic-blue" />
-                  <span className="text-sm">Earth Orbit • Remote Operations</span>
+                  <span className="text-sm">India • Open to Remote</span>
                 </div>
               </div>
             </div>
 
             {/* Orbital Social Links */}
             <div className="glass-morphism rounded-2xl p-6 border border-nebula-purple/20">
-              <h3 className="text-xl font-display font-bold text-star-white mb-6">Orbital Network</h3>
+              <h3 className="text-xl font-display font-bold text-star-white mb-6">Connect</h3>
               <div className="space-y-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -489,19 +489,19 @@ export default function Contact() {
             <div className="glass-morphism rounded-2xl p-6 border border-solar-yellow/20">
               <h3 className="text-xl font-display font-bold text-star-white mb-4 flex items-center gap-2">
                 <Radio className="w-5 h-5 text-solar-yellow animate-pulse" />
-                Response Protocol
+                Response Time
               </h3>
               <div className="space-y-3 text-sm text-asteroid-gray">
                 <div className="flex justify-between">
-                  <span>Standard Missions:</span>
+                  <span>General inquiries:</span>
                   <span className="text-star-white">24-48 hours</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Priority Missions:</span>
+                  <span>Priority:</span>
                   <span className="text-solar-yellow">8-12 hours</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Urgent Missions:</span>
+                  <span>Urgent:</span>
                   <span className="text-red-400">2-4 hours</span>
                 </div>
               </div>

@@ -38,154 +38,125 @@ interface ProjectCardProps {
 
 const projects: ProjectData[] = [
   {
-    id: 'nexus-platform',
-    title: 'Nexus Commerce Platform',
-    subtitle: 'Enterprise E-commerce Architecture',
-    description: 'Scalable microservices platform serving 10M+ users with real-time inventory and AI-driven personalization',
-    longDescription: 'Built from ground up using Next.js 14, featuring advanced caching strategies, real-time WebSocket connections, and integrated payment processing. Implemented comprehensive testing suite and CI/CD pipeline.',
-    image: '/projects/nexus-platform.jpg',
+    id: 'cloud-app-catalog-api',
+    title: 'Cloud App Catalog API',
+    subtitle: 'Core Internal Shared Service',
+    description: 'Built from scratch to expose risk and compliance metrics for 31k+ applications to engineering teams across Microsoft.',
+    longDescription: 'Designed and implemented a shared internal API that serves risk, security, and compliance metrics for 31k+ cloud applications. Adopted by multiple engineering teams as a single source of truth, with an automated update pipeline that reduced catalog lifecycle time from 12 to 2 hours.',
+    image: '/projects/catalog-api.jpg',
     technologies: [
-      { name: 'Next.js 14', category: 'frontend', icon: '⚛️' },
-      { name: 'TypeScript', category: 'frontend', icon: '🔷' },
       { name: 'Node.js', category: 'backend', icon: '🟢' },
-      { name: 'PostgreSQL', category: 'backend', icon: '🐘' },
+      { name: 'TypeScript', category: 'backend', icon: '🔷' },
+      { name: 'Azure Cosmos DB', category: 'platform', icon: '☁️' },
       { name: 'Redis', category: 'backend', icon: '🔴' },
-      { name: 'Docker', category: 'tools', icon: '🐳' },
-      { name: 'AWS', category: 'platform', icon: '☁️' },
-      { name: 'Kubernetes', category: 'platform', icon: '⚓' }
+      { name: 'Azure DevOps', category: 'tools', icon: '🔄' },
+      { name: 'REST APIs', category: 'backend', icon: '🔗' }
     ],
     features: [
-      'Real-time inventory management',
-      'AI-powered recommendation engine',
-      'Multi-tenant architecture',
-      'Advanced caching layer',
-      'Comprehensive analytics dashboard'
+      'Risk and compliance metrics for 31k+ applications',
+      'Consumed as a shared service by multiple Microsoft teams',
+      'Automated catalog update pipeline via Azure DevOps',
+      'Backed by Azure Cosmos DB with a Redis cache layer'
     ],
     impact: [
-      { metric: 'Users Served', value: '10M+' },
-      { metric: 'Uptime', value: '99.9%' },
-      { metric: 'Performance Score', value: '98/100' },
-      { metric: 'Load Reduction', value: '65%' }
+      { metric: 'Apps Exposed', value: '31K+' },
+      { metric: 'Lifecycle Cut', value: '12h → 2h' },
+      { metric: 'Cycle Reduction', value: '83%' },
+      { metric: 'Consuming Teams', value: 'Multiple' }
     ],
-    links: {
-      live: 'https://nexus-commerce.demo',
-      github: 'https://github.com/pradhyumanarora/nexus-platform',
-      demo: 'https://demo.nexus-commerce.io'
-    },
+    links: {},
     status: 'production',
     year: '2024'
   },
   {
-    id: 'quantum-analytics',
-    title: 'Quantum Analytics Dashboard',
-    subtitle: 'Real-time Data Visualization',
-    description: 'High-performance dashboard processing 1TB+ daily data with ML-powered insights and predictive modeling',
-    longDescription: 'Advanced data visualization platform built with React and D3.js, featuring real-time WebSocket connections, custom charting components, and machine learning integration for predictive analytics.',
-    image: '/projects/quantum-analytics.jpg',
+    id: 'shadow-it-ai-copilot',
+    title: 'Shadow IT AI Copilot',
+    subtitle: 'LLM-Powered Security Assistant (MCP)',
+    description: 'AI Copilot enabling natural language querying of SaaS security metrics, backed by high-throughput APIs and semantic caching.',
+    longDescription: 'Engineered an AI Copilot for Shadow IT Discovery that integrates an LLM layer with high-throughput backend APIs, letting users query SaaS security metrics in natural language. Added a semantic caching layer using Redis Vector Search and an MCP schema-compression proxy to cut inference overhead, latency, and token usage.',
+    image: '/projects/ai-copilot.jpg',
     technologies: [
-      { name: 'React 18', category: 'frontend', icon: '⚛️' },
-      { name: 'D3.js', category: 'frontend', icon: '📊' },
+      { name: 'MCP', category: 'tools', icon: '🤖' },
+      { name: 'LangChain', category: 'tools', icon: '🧠' },
+      { name: 'Redis Vector Search', category: 'backend', icon: '🔴' },
+      { name: 'Node.js', category: 'backend', icon: '🟢' },
       { name: 'Python', category: 'backend', icon: '🐍' },
-      { name: 'FastAPI', category: 'backend', icon: '⚡' },
-      { name: 'ClickHouse', category: 'backend', icon: '🏠' },
-      { name: 'TensorFlow', category: 'tools', icon: '🧠' },
-      { name: 'Apache Kafka', category: 'platform', icon: '📨' },
-      { name: 'Grafana', category: 'tools', icon: '📈' }
+      { name: 'Azure', category: 'platform', icon: '☁️' }
     ],
     features: [
-      'Real-time streaming data processing',
-      'Custom D3.js visualizations',
-      'ML-powered anomaly detection',
-      'Interactive filtering system',
-      'Exportable reporting suite'
+      'Natural language querying of SaaS security metrics',
+      'Semantic caching with Redis Vector Search',
+      'MCP schema-compression proxy and response filtering',
+      'Custom MCP extensibility tools for internal workflows'
     ],
     impact: [
-      { metric: 'Data Processed', value: '1TB+/day' },
-      { metric: 'Query Performance', value: '<100ms' },
-      { metric: 'Accuracy Rate', value: '97.3%' },
-      { metric: 'Cost Savings', value: '$2M+/year' }
+      { metric: 'Inference Overhead', value: '-40%' },
+      { metric: 'Cache Latency', value: '<30ms' },
+      { metric: 'Token Utilization', value: '-85%' },
+      { metric: 'Interface', value: 'Natural Language' }
     ],
-    links: {
-      live: 'https://quantum-analytics.demo',
-      github: 'https://github.com/pradhyumanarora/quantum-analytics'
-    },
+    links: {},
     status: 'production',
-    year: '2023'
+    year: '2025'
   },
   {
-    id: 'neural-cms',
-    title: 'Neural Content Management',
-    subtitle: 'AI-Enhanced CMS Platform',
-    description: 'Headless CMS with AI content optimization, multi-language support, and advanced workflow automation',
-    longDescription: 'Next-generation content management system featuring AI-powered content suggestions, automated SEO optimization, and sophisticated role-based permissions. Built with modern JAMstack architecture.',
-    image: '/projects/neural-cms.jpg',
+    id: 'cosmos-db-migration',
+    title: 'MongoDB → Cosmos DB Migration',
+    subtitle: 'Zero-Downtime Data Migration',
+    description: 'Led a zero-downtime migration of 500+ GB of production data across 12 microservices with 0 data loss.',
+    longDescription: 'Planned and executed the migration of 500+ GB of production data from MongoDB to Azure Cosmos DB across 12 microservices. Designed the cutover strategy to complete in under 15 minutes with zero data loss and no downtime for 45k+ daily active users.',
+    image: '/projects/migration.jpg',
     technologies: [
-      { name: 'Vue 3', category: 'frontend', icon: '💚' },
-      { name: 'Nuxt.js', category: 'frontend', icon: '🎯' },
-      { name: 'GraphQL', category: 'backend', icon: '🔗' },
+      { name: 'Azure Cosmos DB', category: 'platform', icon: '☁️' },
       { name: 'MongoDB', category: 'backend', icon: '🍃' },
-      { name: 'OpenAI', category: 'tools', icon: '🤖' },
-      { name: 'Elasticsearch', category: 'backend', icon: '🔍' },
-      { name: 'Netlify', category: 'platform', icon: '🌐' },
-      { name: 'Stripe', category: 'tools', icon: '💳' }
+      { name: 'Node.js', category: 'backend', icon: '🟢' },
+      { name: 'Azure Event Hubs', category: 'platform', icon: '📨' },
+      { name: 'Microservices', category: 'tools', icon: '🧩' }
     ],
     features: [
-      'AI-powered content optimization',
-      'Headless architecture',
-      'Multi-language support',
-      'Advanced workflow engine',
-      'Real-time collaboration'
+      'Migrated 500+ GB of live production data',
+      'Coordinated cutover across 12 microservices',
+      'Under 15-minute cutover window',
+      'No downtime for 45k+ daily active users'
     ],
     impact: [
-      { metric: 'Content Quality', value: '+85%' },
-      { metric: 'Publishing Speed', value: '3x faster' },
-      { metric: 'SEO Performance', value: '+120%' },
-      { metric: 'User Adoption', value: '94%' }
+      { metric: 'Data Migrated', value: '500GB+' },
+      { metric: 'Data Loss', value: '0' },
+      { metric: 'Cutover Time', value: '<15 min' },
+      { metric: 'Microservices', value: '12' }
     ],
-    links: {
-      live: 'https://neural-cms.demo',
-      github: 'https://github.com/pradhyumanarora/neural-cms',
-      demo: 'https://demo.neural-cms.io'
-    },
-    status: 'beta',
+    links: {},
+    status: 'production',
     year: '2024'
   },
   {
-    id: 'spectrum-ui',
-    title: 'Spectrum Design System',
-    subtitle: 'Enterprise Component Library',
-    description: 'Comprehensive design system with 150+ components, accessibility compliance, and multi-framework support',
-    longDescription: 'Production-ready design system built with Storybook, featuring comprehensive documentation, automated testing, and support for React, Vue, and Angular frameworks.',
-    image: '/projects/spectrum-ui.jpg',
+    id: 'redis-distributed-cache',
+    title: 'Distributed Cache Layer',
+    subtitle: 'Cache-Aside Pattern with Redis',
+    description: 'Architected a Redis-based distributed cache that slashed Cosmos DB read overhead by 92% under peak loads.',
+    longDescription: 'Designed and rolled out a Redis-based distributed cache using the Cache-Aside pattern for the Cloud Discovery engine. Reduced Azure Cosmos DB read overhead by 92% and optimized downstream dependency latency under peak production load, improving cost efficiency and reliability.',
+    image: '/projects/cache.jpg',
     technologies: [
-      { name: 'Storybook', category: 'tools', icon: '📚' },
-      { name: 'Web Components', category: 'frontend', icon: '🧩' },
-      { name: 'SCSS', category: 'frontend', icon: '🎨' },
-      { name: 'Jest', category: 'tools', icon: '🧪' },
-      { name: 'Playwright', category: 'tools', icon: '🎭' },
-      { name: 'Figma API', category: 'tools', icon: '🎯' },
-      { name: 'GitHub Actions', category: 'platform', icon: '🔄' },
-      { name: 'npm', category: 'platform', icon: '📦' }
+      { name: 'Redis', category: 'backend', icon: '🔴' },
+      { name: 'Azure Cosmos DB', category: 'platform', icon: '☁️' },
+      { name: 'Node.js', category: 'backend', icon: '🟢' },
+      { name: 'Azure Monitor', category: 'tools', icon: '📈' }
     ],
     features: [
-      '150+ accessible components',
-      'Multi-framework support',
-      'Automated visual regression testing',
-      'Design tokens system',
-      'Comprehensive documentation'
+      'Cache-Aside caching pattern implementation',
+      'Reduced Cosmos DB read overhead by 92%',
+      'Optimized downstream dependency latency',
+      'Improved resilience under peak load'
     ],
     impact: [
-      { metric: 'Components', value: '150+' },
-      { metric: 'Teams Using', value: '25+' },
-      { metric: 'Development Speed', value: '+200%' },
-      { metric: 'Accessibility Score', value: '100%' }
+      { metric: 'Read Overhead', value: '-92%' },
+      { metric: 'Pattern', value: 'Cache-Aside' },
+      { metric: 'Peak Load', value: 'Optimized' },
+      { metric: 'Cost', value: 'Reduced' }
     ],
-    links: {
-      live: 'https://spectrum-ui.design',
-      github: 'https://github.com/pradhyumanarora/spectrum-ui'
-    },
+    links: {},
     status: 'production',
-    year: '2023'
+    year: '2024'
   }
 ]
 
@@ -461,11 +432,11 @@ export default function Projects() {
               WebkitTextFillColor: 'transparent'
             }}
           >
-            Mission Archives
+            Featured Projects
           </motion.h2>
           <p className="text-lg text-asteroid-gray max-w-3xl mx-auto leading-relaxed">
-            Featured projects showcasing 25+ years of space-station level engineering,
-            each card enhanced with holographic borders and 3D interaction effects.
+            Production systems I've designed and shipped at Microsoft Defender for Cloud Apps —
+            spanning high-throughput APIs, data migration, distributed caching, and AI.
           </p>
         </motion.div>
         
@@ -504,23 +475,23 @@ export default function Projects() {
           className="mt-20 text-center"
         >
           <div className="glass-morphism rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-display font-bold text-star-white mb-8">Mission Statistics</h3>
+            <h3 className="text-2xl font-display font-bold text-star-white mb-8">Impact at a Glance</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-nebula-purple mb-2">25+</div>
-                <div className="text-sm text-asteroid-gray">Years Experience</div>
+                <div className="text-3xl font-bold text-nebula-purple mb-2">45K+</div>
+                <div className="text-sm text-asteroid-gray">Daily Active Users</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-solar-yellow mb-2">100+</div>
-                <div className="text-sm text-asteroid-gray">Projects Delivered</div>
+                <div className="text-3xl font-bold text-solar-yellow mb-2">500GB+</div>
+                <div className="text-sm text-asteroid-gray">Data Migrated</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cosmic-blue mb-2">50M+</div>
-                <div className="text-sm text-asteroid-gray">Users Impacted</div>
+                <div className="text-3xl font-bold text-cosmic-blue mb-2">31K+</div>
+                <div className="text-sm text-asteroid-gray">Apps in Catalog API</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-star-white mb-2">99.9%</div>
-                <div className="text-sm text-asteroid-gray">Uptime Achieved</div>
+                <div className="text-3xl font-bold text-star-white mb-2">92%</div>
+                <div className="text-sm text-asteroid-gray">Read Overhead Cut</div>
               </div>
             </div>
           </div>

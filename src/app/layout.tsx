@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Space Portfolio | Senior Frontend Engineer',
-  description: 'Professional portfolio showcasing 25+ years of frontend engineering expertise with a cosmic aesthetic',
-  keywords: ['frontend engineer', 'portfolio', 'React', 'Next.js', 'TypeScript', 'web development'],
-  authors: [{ name: 'Senior Frontend Engineer' }],
-  creator: 'Senior Frontend Engineer',
-  publisher: 'Senior Frontend Engineer',
+  title: 'Pradhyuman Arora | Software Engineer',
+  description: 'Software Engineer at Microsoft with 2+ years building cloud infrastructure, distributed systems, and security products for Microsoft Defender for Cloud Apps.',
+  keywords: ['software engineer', 'cloud infrastructure', 'distributed systems', 'backend', 'Microsoft', 'Azure', 'TypeScript', 'Python', 'portfolio'],
+  authors: [{ name: 'Pradhyuman Arora' }],
+  creator: 'Pradhyuman Arora',
+  publisher: 'Pradhyuman Arora',
   formatDetection: {
     email: false,
     address: false,
@@ -15,16 +15,16 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://your-portfolio-domain.com'),
   openGraph: {
-    title: 'Space Portfolio | Senior Frontend Engineer',
-    description: 'Professional portfolio showcasing 25+ years of frontend engineering expertise',
+    title: 'Pradhyuman Arora | Software Engineer',
+    description: 'Software Engineer at Microsoft building cloud infrastructure, distributed systems, and security products.',
     url: 'https://your-portfolio-domain.com',
-    siteName: 'Space Portfolio',
+    siteName: 'Pradhyuman Arora',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Space Portfolio Preview',
+        alt: 'Pradhyuman Arora — Software Engineer',
       },
     ],
     locale: 'en_US',
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Space Portfolio | Senior Frontend Engineer',
-    description: 'Professional portfolio showcasing 25+ years of frontend engineering expertise',
+    title: 'Pradhyuman Arora | Software Engineer',
+    description: 'Software Engineer at Microsoft building cloud infrastructure, distributed systems, and security products.',
     images: ['/twitter-image.jpg'],
   },
   robots: {

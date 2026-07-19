@@ -6,27 +6,27 @@ import { Code, Rocket, Users, Award } from 'lucide-react'
 const achievements = [
   {
     icon: Code,
-    number: '25+',
-    label: 'Years of Experience',
-    description: 'Navigating the frontend universe'
+    number: '2+',
+    label: 'Years at Microsoft',
+    description: 'Shipping production backend systems'
   },
   {
     icon: Rocket,
-    number: '100+',
-    label: 'Projects Launched',
-    description: 'Successful mission deployments'
+    number: '45K+',
+    label: 'Daily Active Users',
+    description: 'Served by systems I own'
   },
   {
     icon: Users,
-    number: '50+',
-    label: 'Team Members Led',
-    description: 'Guiding crews to success'
+    number: '31K+',
+    label: 'Apps in Catalog API',
+    description: 'Exposed as a shared service'
   },
   {
     icon: Award,
-    number: '15+',
-    label: 'Technologies Mastered',
-    description: 'Tools in the arsenal'
+    number: '92%',
+    label: 'Read Overhead Cut',
+    description: 'Via a distributed cache layer'
   }
 ]
 
@@ -65,12 +65,12 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-star-white mb-6">
-            About the Mission Commander
+            About Me
           </h2>
           <p className="text-lg text-asteroid-gray max-w-3xl mx-auto leading-relaxed">
-            With over 25 years navigating the ever-evolving landscape of frontend engineering,
-            I've witnessed and led the transformation from static HTML pages to dynamic,
-            interactive web applications that power modern digital experiences.
+            I'm a Software Engineer on the Shadow IT team at Microsoft Defender for Cloud Apps,
+            focused on building reliable, high-throughput backend systems on Azure. I care about
+            clean architecture, scale, and secure-by-default engineering.
           </p>
         </motion.div>
         
@@ -86,30 +86,30 @@ export default function About() {
           >
             <div className="glass-morphism rounded-2xl p-8">
               <h3 className="text-2xl font-display font-semibold text-star-white mb-4">
-                The Journey Through Space & Time
+                What I Do
               </h3>
               <p className="text-asteroid-gray leading-relaxed mb-4">
-                From the early days of table-based layouts and jQuery magic to the modern era 
-                of React ecosystems and serverless architectures, I've been at the forefront 
-                of frontend innovation. My journey spans the evolution of web standards, 
-                performance optimization techniques, and user experience paradigms.
+                At Microsoft Defender for Cloud Apps, I own backend features for the Cloud Discovery
+                engine that processes real-time logs via Azure Event Hubs to power shadow IT detection
+                for 45k+ daily active users. I've led a zero-downtime migration of 500+ GB of production
+                data from MongoDB to Azure Cosmos DB and built the Cloud App Catalog API from scratch.
               </p>
               <p className="text-asteroid-gray leading-relaxed">
-                As a senior engineer and team leader, I've successfully launched over 100 
-                projects, mentored 50+ developers, and consistently delivered high-performance 
-                applications that serve millions of users across the digital cosmos.
+                More recently, I've been building an AI Copilot (MCP) for Shadow IT Discovery,
+                integrating LLMs with high-throughput backend APIs and designing semantic caching
+                with Redis Vector Search to cut inference overhead and latency.
               </p>
             </div>
             
             <div className="glass-morphism rounded-2xl p-8">
               <h3 className="text-2xl font-display font-semibold text-star-white mb-4">
-                Mission Philosophy
+                How I Work
               </h3>
               <p className="text-asteroid-gray leading-relaxed">
-                I believe in crafting code that's not just functional, but elegant—like the 
-                precise orbital mechanics that keep satellites in perfect harmony. Every line 
-                of code should serve a purpose, every component should be reusable, and every 
-                user interaction should feel as smooth as gliding through zero gravity.
+                I believe good systems are simple, observable, and secure by default. I optimize for
+                reliability and scale, invest in strong test coverage and automation, and enforce
+                least-privilege access across the services I build. Every change should be measurable
+                and safe to ship.
               </p>
             </div>
           </motion.div>
@@ -166,16 +166,16 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: 'Performance First',
-                description: 'Every millisecond counts in the user experience journey'
+                title: 'Reliability at Scale',
+                description: 'Systems should stay fast and correct under peak production load'
               },
               {
-                title: 'Accessibility Always',
-                description: 'Inclusive design ensures no user is left behind in space'
+                title: 'Security by Design',
+                description: 'Zero-trust and least-privilege access built in from the start'
               },
               {
                 title: 'Continuous Learning',
-                description: 'The tech universe expands daily, and so must our knowledge'
+                description: 'The stack keeps evolving, and so does the way I build'
               }
             ].map((value, index) => (
               <motion.div

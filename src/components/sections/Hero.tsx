@@ -5,11 +5,11 @@ import { motion } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
 
 const TYPEWRITER_TEXTS = [
-  'Frontend Architect',
-  'React Specialist',
-  'Performance Expert',
-  'UI/UX Enthusiast',
-  'Team Leader'
+  'Software Engineer',
+  'Cloud Infrastructure',
+  'Distributed Systems',
+  'Backend & APIs',
+  'AI Systems'
 ]
 
 export default function Hero() {
@@ -58,8 +58,8 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <h1 className="text-4xl sm:text-6xl lg:text-hero font-display font-bold text-star-white mb-6">
-              <span className="block">Senior</span>
-              <span className="block text-glow">
+              <span className="block">Pradhyuman Arora</span>
+              <span className="block text-glow text-3xl sm:text-4xl lg:text-5xl mt-2">
                 {currentText}
                 <span className="animate-pulse">|</span>
               </span>
@@ -73,9 +73,10 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             className="text-lg sm:text-xl lg:text-2xl text-asteroid-gray max-w-3xl mx-auto mb-8 leading-relaxed"
           >
-            Exploring the digital cosmos for{' '}
-            <span className="text-stellar-purple font-semibold">25+ years</span>,
-            crafting exceptional user experiences with cutting-edge technologies
+            Software Engineer at{' '}
+            <span className="text-stellar-purple font-semibold">Microsoft Defender for Cloud Apps</span>,
+            building high-throughput cloud infrastructure, distributed systems, and secure
+            backend services at scale.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -94,7 +95,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-gradient-to-r from-stellar-purple to-nebula-pink text-star-white font-semibold rounded-lg shadow-lg hover:shadow-glow-purple transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-stellar-purple focus:ring-offset-2 focus:ring-offset-deep-space"
             >
-              Explore Mission Archives
+              View My Work
             </motion.button>
 
             <motion.button
@@ -103,7 +104,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 border-2 border-stellar-purple text-stellar-purple font-semibold rounded-lg hover:bg-stellar-purple hover:text-star-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-stellar-purple focus:ring-offset-2 focus:ring-offset-deep-space"
             >
-              Initiate Contact Protocol
+              Get in Touch
             </motion.button>
           </motion.div>
 
@@ -117,7 +118,7 @@ export default function Hero() {
             {[
               { Icon: Github, href: 'https://github.com/pradhyumanarora', label: 'GitHub' },
               { Icon: Linkedin, href: 'https://www.linkedin.com/in/pradhyumanarora/', label: 'LinkedIn' },
-              { Icon: Mail, href: 'mailto:arorapradhyuman@gmail.com', label: 'Email' }
+              { Icon: Mail, href: 'mailto:pradhyumanarora@gmail.com', label: 'Email' }
             ].map(({ Icon, href, label }) => (
               <motion.a
                 key={label}

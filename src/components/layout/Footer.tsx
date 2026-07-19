@@ -6,10 +6,10 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-asteroid-gray">
-            © {currentYear} Space Portfolio. Crafted with cosmic precision and stellar attention to detail.
+            © {currentYear} Pradhyuman Arora. All rights reserved.
           </p>
           <p className="text-sm text-asteroid-gray/60 mt-2">
-            Powered by Next.js, Framer Motion, and the endless possibilities of space.
+            Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
           </p>
         </div>
       </div>

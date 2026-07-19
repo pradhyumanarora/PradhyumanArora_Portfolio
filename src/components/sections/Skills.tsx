@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
-import { Star, Zap, Code, Palette, Database, Cloud, Cpu, Users } from 'lucide-react';
+import { Star, Zap, Code, Database, Cloud, Cpu } from 'lucide-react';
 
 interface SkillNode {
   id: string;
@@ -24,276 +24,288 @@ interface SkillConnection {
 }
 
 const skillsData: SkillNode[] = [
-  // Frontend Cluster (Stellar Purple) - Left side, well-spaced
+  // Languages Cluster (Stellar Purple) - Left side
   {
-    id: 'react',
-    label: 'React',
+    id: 'python',
+    label: 'Python',
     category: 'frontend',
     x: 150,
     y: 150,
-    connections: ['nextjs', 'typescript'],
+    connections: ['typescript', 'django', 'langchain'],
     icon: Code,
-    description: 'Expert in React ecosystem building complex applications',
+    description: 'Primary language for backend services, tooling, and AI integrations',
     proficiency: 5,
-    experience: '2+ years'
-  },
-  {
-    id: 'nextjs',
-    label: 'Next.js',
-    category: 'frontend',
-    x: 250,
-    y: 100,
-    connections: ['react', 'typescript', 'vercel'],
-    icon: Zap,
-    description: 'Full-stack React framework specialist with App Router expertise',
-    proficiency: 5,
-    experience: '2+ years'
+    experience: '4+ years'
   },
   {
     id: 'typescript',
     label: 'TypeScript',
     category: 'frontend',
-    x: 200,
-    y: 200,
-    connections: ['react', 'nodejs'],
+    x: 240,
+    y: 110,
+    connections: ['nodejs', 'javascript'],
     icon: Code,
-    description: 'Advanced TypeScript developer with strong type system design',
+    description: 'Typed JavaScript for building reliable Node.js services',
     proficiency: 5,
-    experience: '2+ years'
+    experience: '3+ years'
   },
   {
-    id: 'tailwind',
-    label: 'Tailwind CSS',
+    id: 'javascript',
+    label: 'JavaScript',
     category: 'frontend',
-    x: 100,
-    y: 200,
-    connections: ['react'],
-    icon: Palette,
-    description: 'Expert in utility-first CSS with custom design system creation',
+    x: 110,
+    y: 220,
+    connections: ['nodejs'],
+    icon: Code,
+    description: 'Full-stack JavaScript across backend and web tooling',
     proficiency: 5,
-    experience: '2+ years'
+    experience: '4+ years'
+  },
+  {
+    id: 'java',
+    label: 'Java',
+    category: 'frontend',
+    x: 250,
+    y: 200,
+    connections: [],
+    icon: Code,
+    description: 'JVM-based service development and coursework foundations',
+    proficiency: 4,
+    experience: '3+ years'
+  },
+  {
+    id: 'cpp',
+    label: 'C++',
+    category: 'frontend',
+    x: 180,
+    y: 270,
+    connections: [],
+    icon: Code,
+    description: 'Systems-level programming and performance-critical code',
+    proficiency: 3,
+    experience: '3+ years'
   },
 
-  // Backend Cluster (Nebula Pink) - Right side
+  // Backend & Data Cluster (Nebula Pink) - Right side
   {
     id: 'nodejs',
     label: 'Node.js',
     category: 'backend',
     x: 500,
-    y: 200,
-    connections: ['typescript', 'mongodb', 'postgresql'],
+    y: 150,
+    connections: ['typescript', 'express', 'redis', 'cosmosdb'],
     icon: Database,
-    description: 'Full-stack JavaScript runtime with microservices architecture',
+    description: 'Event-driven backend runtime powering high-throughput microservices',
+    proficiency: 5,
+    experience: '3+ years'
+  },
+  {
+    id: 'express',
+    label: 'Express',
+    category: 'backend',
+    x: 610,
+    y: 120,
+    connections: ['nodejs'],
+    icon: Database,
+    description: 'REST API development and middleware for backend services',
     proficiency: 4,
-    experience: '7+ years'
+    experience: '2+ years'
+  },
+  {
+    id: 'django',
+    label: 'Django',
+    category: 'backend',
+    x: 450,
+    y: 240,
+    connections: ['python'],
+    icon: Database,
+    description: 'Python web framework for full-stack application development',
+    proficiency: 4,
+    experience: '2+ years'
+  },
+  {
+    id: 'cosmosdb',
+    label: 'Azure Cosmos DB',
+    category: 'backend',
+    x: 610,
+    y: 210,
+    connections: ['nodejs', 'azure'],
+    icon: Database,
+    description: 'Globally distributed NoSQL database at production scale',
+    proficiency: 5,
+    experience: '2+ years'
   },
   {
     id: 'mongodb',
     label: 'MongoDB',
     category: 'backend',
-    x: 600,
-    y: 150,
+    x: 690,
+    y: 160,
     connections: ['nodejs'],
     icon: Database,
-    description: 'NoSQL database design and optimization specialist',
+    description: 'Document database design, migration, and optimization',
     proficiency: 4,
-    experience: '5+ years'
+    experience: '2+ years'
   },
   {
-    id: 'postgresql',
-    label: 'PostgreSQL',
+    id: 'redis',
+    label: 'Redis',
     category: 'backend',
     x: 550,
     y: 280,
     connections: ['nodejs'],
     icon: Database,
-    description: 'Relational database expert with complex query optimization',
-    proficiency: 4,
-    experience: '8+ years'
+    description: 'Distributed caching and Redis Vector Search for semantic caching',
+    proficiency: 5,
+    experience: '2+ years'
   },
   {
-    id: 'python',
-    label: 'Python',
+    id: 'mysql',
+    label: 'MySQL',
     category: 'backend',
-    x: 450,
-    y: 180,
-    connections: ['ai'],
-    icon: Code,
-    description: 'Backend development and automation scripting',
-    proficiency: 3,
-    experience: '4+ years'
-  },
-
-  // Tools Cluster (Solar Gold) - Bottom area, spread out
-  {
-    id: 'git',
-    label: 'Git',
-    category: 'tools',
-    x: 150,
-    y: 350,
-    connections: ['github'],
-    icon: Code,
-    description: 'Advanced Git workflows and version control strategies',
-    proficiency: 5,
-    experience: '15+ years'
-  },
-  {
-    id: 'github',
-    label: 'GitHub',
-    category: 'tools',
-    x: 250,
-    y: 380,
-    connections: ['git', 'ci-cd', 'vercel'],
-    icon: Code,
-    description: 'GitHub Actions, project management, and collaboration expert',
-    proficiency: 5,
-    experience: '10+ years'
-  },
-  {
-    id: 'docker',
-    label: 'Docker',
-    category: 'tools',
-    x: 350,
-    y: 400,
-    connections: ['kubernetes', 'ci-cd'],
-    icon: Cloud,
-    description: 'Containerization and development environment optimization',
-    proficiency: 4,
-    experience: '5+ years'
-  },
-  {
-    id: 'kubernetes',
-    label: 'Kubernetes',
-    category: 'tools',
-    x: 450,
-    y: 380,
-    connections: ['docker', 'azure'],
-    icon: Cloud,
-    description: 'Container orchestration and cloud-native deployments',
+    x: 690,
+    y: 260,
+    connections: [],
+    icon: Database,
+    description: 'Relational database design and query optimization',
     proficiency: 3,
     experience: '3+ years'
   },
+
+  // Cloud & DevOps Cluster (Solar Gold) - Bottom area
   {
     id: 'azure',
     label: 'Azure',
     category: 'tools',
-    x: 550,
-    y: 350,
-    connections: ['kubernetes'],
+    x: 300,
+    y: 360,
+    connections: ['docker', 'cosmosdb', 'monitoring'],
     icon: Cloud,
-    description: 'Microsoft Azure cloud infrastructure and AI services',
-    proficiency: 4,
-    experience: '3+ years'
+    description: 'Primary cloud platform: Event Hubs, Cosmos DB, and managed identities',
+    proficiency: 5,
+    experience: '2+ years'
   },
   {
     id: 'gcp',
     label: 'Google Cloud',
     category: 'tools',
-    x: 650,
-    y: 380,
+    x: 180,
+    y: 400,
     connections: ['kubernetes'],
     icon: Cloud,
-    description: 'Google Cloud Platform services and machine learning tools',
+    description: 'Cloud services and infrastructure fundamentals',
     proficiency: 3,
+    experience: '1+ years'
+  },
+  {
+    id: 'docker',
+    label: 'Docker',
+    category: 'tools',
+    x: 400,
+    y: 410,
+    connections: ['kubernetes', 'azure'],
+    icon: Cloud,
+    description: 'Containerization of services and reproducible environments',
+    proficiency: 4,
     experience: '2+ years'
   },
   {
-    id: 'vercel',
-    label: 'Vercel',
+    id: 'kubernetes',
+    label: 'Kubernetes',
     category: 'tools',
-    x: 450,
-    y: 320,
-    connections: ['github', 'ci-cd'],
-    icon: Zap,
-    description: 'Modern deployment platform with edge computing',
-    proficiency: 5,
-    experience: '3+ years'
+    x: 500,
+    y: 390,
+    connections: ['docker'],
+    icon: Cloud,
+    description: 'Container orchestration for cloud-native deployments',
+    proficiency: 3,
+    experience: '1+ years'
   },
   {
-    id: 'ci-cd',
-    label: 'CI/CD',
+    id: 'azuredevops',
+    label: 'Azure DevOps',
     category: 'tools',
-    x: 350,
-    y: 320,
-    connections: ['github', 'vercel', 'docker'],
+    x: 610,
+    y: 360,
+    connections: ['docker'],
     icon: Cpu,
-    description: 'Automated testing and deployment pipeline expert',
+    description: 'CI/CD pipelines and release automation',
     proficiency: 4,
-    experience: '8+ years'
+    experience: '2+ years'
+  },
+  {
+    id: 'monitoring',
+    label: 'Azure Monitor',
+    category: 'tools',
+    x: 700,
+    y: 310,
+    connections: ['azure'],
+    icon: Cpu,
+    description: 'Observability with Azure Monitor and Application Insights',
+    proficiency: 4,
+    experience: '2+ years'
   },
 
-  // Soft Skills Cluster (Comet Green) - Top area
+  // AI & Architecture Cluster (Comet Green) - Top area
   {
-    id: 'leadership',
-    label: 'Leadership',
-    category: 'soft',
-    x: 600,
-    y: 80,
-    connections: ['mentoring'],
-    icon: Users,
-    description: 'Leading engineering teams and driving technical vision',
-    proficiency: 5,
-    experience: '10+ years'
-  },
-  {
-    id: 'mentoring',
-    label: 'Mentoring',
-    category: 'soft',
-    x: 500,
-    y: 50,
-    connections: ['leadership', 'communication'],
-    icon: Users,
-    description: 'Mentored 10+ college students in software development and career growth',
-    proficiency: 5,
-    experience: '12+ years'
-  },
-  {
-    id: 'communication',
-    label: 'Communication',
-    category: 'soft',
-    x: 400,
-    y: 80,
-    connections: ['mentoring'],
-    icon: Users,
-    description: 'Cross-functional collaboration and technical presentations',
-    proficiency: 5,
-    experience: '15+ years'
-  },
-  {
-    id: 'design',
-    label: 'Design Systems',
-    category: 'soft',
-    x: 300,
-    y: 50,
-    connections: ['tailwind'],
-    icon: Palette,
-    description: 'UX/UI collaboration and systematic design thinking',
-    proficiency: 4,
-    experience: '8+ years'
-  },
-  {
-    id: 'ai',
-    label: 'AI Integration',
-    category: 'soft',
-    x: 450,
-    y: 100,
-    connections: ['python'],
-    icon: Cpu,
-    description: 'AI-powered development tools and modern workflows',
-    proficiency: 3,
-    experience: '2+ years'
-  },
-  {
-    id: 'innovation',
-    label: 'Innovation',
+    id: 'microservices',
+    label: 'Microservices',
     category: 'soft',
     x: 350,
     y: 150,
-    connections: ['ai'],
-    icon: Star,
-    description: 'Driving technical innovation and emerging tech adoption',
+    connections: ['nodejs', 'eventdriven'],
+    icon: Cpu,
+    description: 'Designing and operating distributed microservice architectures',
     proficiency: 5,
-    experience: '15+ years'
+    experience: '2+ years'
+  },
+  {
+    id: 'eventdriven',
+    label: 'Event-Driven',
+    category: 'soft',
+    x: 300,
+    y: 70,
+    connections: ['microservices'],
+    icon: Zap,
+    description: 'Real-time log processing with Azure Event Hubs',
+    proficiency: 4,
+    experience: '2+ years'
+  },
+  {
+    id: 'langchain',
+    label: 'LangChain',
+    category: 'soft',
+    x: 450,
+    y: 60,
+    connections: ['python', 'mcp'],
+    icon: Cpu,
+    description: 'Building LLM-powered features and agent workflows',
+    proficiency: 4,
+    experience: '1+ years'
+  },
+  {
+    id: 'autogen',
+    label: 'AutoGen',
+    category: 'soft',
+    x: 560,
+    y: 70,
+    connections: ['langchain'],
+    icon: Cpu,
+    description: 'Multi-agent orchestration for AI systems',
+    proficiency: 3,
+    experience: '1+ years'
+  },
+  {
+    id: 'mcp',
+    label: 'MCP',
+    category: 'soft',
+    x: 600,
+    y: 130,
+    connections: ['langchain'],
+    icon: Star,
+    description: 'Model Context Protocol tooling for AI copilots and extensibility',
+    proficiency: 4,
+    experience: '1+ years'
   }
 ];
 
@@ -305,10 +317,10 @@ const categoryColors = {
 };
 
 const categoryLabels = {
-  frontend: 'Frontend',
-  backend: 'Backend',
-  tools: 'Tools & DevOps',
-  soft: 'Leadership & Soft Skills'
+  frontend: 'Languages',
+  backend: 'Backend & Data',
+  tools: 'Cloud & DevOps',
+  soft: 'AI & Architecture'
 };
 
 export default function Skills() {
@@ -381,12 +393,12 @@ export default function Skills() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <Star className="text-stellar-purple w-8 h-8" />
             <h2 className="text-4xl md:text-5xl font-bold text-star-white font-['Orbitron']">
-              Skills Constellation
+              Skills &amp; Technologies
             </h2>
           </div>
           <p className="text-xl text-asteroid-gray max-w-2xl mx-auto">
-            An interactive map of technical expertise and leadership skills,
-            organized like constellations in the digital cosmos
+            An interactive map of the languages, cloud platforms, and tools I use to
+            build and ship reliable backend systems at scale
           </p>
         </motion.div>
 

@@ -75,7 +75,7 @@ export default function Header() {
               }}
               className="text-xl font-display font-bold text-star-white hover:text-stellar-purple transition-colors duration-200"
             >
-              Portfolio
+              Pradhyuman Arora
             </a>
           </motion.div>
 

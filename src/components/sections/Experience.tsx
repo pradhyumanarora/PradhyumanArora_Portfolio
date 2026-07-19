@@ -18,6 +18,49 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
   {
+    id: 'microsoft-swe-shadow-it',
+    title: 'Software Engineer, Shadow IT',
+    company: 'Microsoft — Defender for Cloud Apps',
+    location: 'India',
+    duration: 'June 2024 - Present',
+    period: 'Current',
+    description: [
+      'Owned backend features for the high-throughput Cloud Discovery engine, processing real-time logs via Azure Event Hubs to power shadow IT detection for 45k+ daily active users',
+      'Led the zero-downtime migration of 500+ GB of production data from MongoDB to Azure Cosmos DB across 12 microservices, executing cutover in under 15 minutes with 0 data loss',
+      'Built the Cloud App Catalog API from scratch as a core internal shared service, exposing risk and compliance metrics for 31k+ applications to multiple engineering teams across Microsoft',
+      'Architected a Redis-based distributed cache (Cache-Aside pattern), slashing Azure Cosmos DB read overhead by 92% and optimizing downstream dependency latency under peak loads',
+      'Engineered an AI Copilot (MCP) for Shadow IT Discovery, integrating an LLM layer with high-throughput backend APIs to enable natural language querying of SaaS security metrics',
+      'Designed a semantic caching layer using Redis Vector Search, slashing LLM inference overhead by 40% and achieving sub-30ms latencies',
+      'Drove zero-trust adoption across 60+ Azure Event Hubs by migrating to Managed Identities, and led SFI compliance execution hardening 200+ Azure resources with Network Security Perimeters'
+    ],
+    technologies: ['Azure Cosmos DB', 'Azure Event Hubs', 'Redis', 'MongoDB', 'Node.js', 'TypeScript', 'MCP', 'LangChain', 'Azure DevOps', 'Managed Identities'],
+    achievements: [
+      'Migrated 500+ GB of production data with 0 data loss and a <15 minute cutover',
+      'Cut Azure Cosmos DB read overhead by 92% via a Cache-Aside Redis layer',
+      'Reduced LLM inference overhead by 40% and token utilization by 85% for the Shadow IT Copilot',
+      'Automated the Catalog update pipeline via Azure DevOps, cutting lifecycle cycles from 12 to 2 hours (83% reduction)',
+      'Achieved 100% closure on 12 security KPIs and authored 200+ unit tests across 12 critical service paths'
+    ]
+  },
+  {
+    id: 'aiqod-software-dev-intern',
+    title: 'Software Developer Intern',
+    company: 'AiQod',
+    location: 'Remote',
+    duration: 'Dec 2023 - Feb 2024',
+    period: '3 months',
+    description: [
+      'Engineered a synthetic training data pipeline using open-source image generation models',
+      'Deployed a full-stack React/Node.js object detection platform',
+      'Reduced the cost of ML data labeling through automated synthetic data generation'
+    ],
+    technologies: ['React', 'Node.js', 'Python', 'Computer Vision', 'Image Generation', 'Object Detection'],
+    achievements: [
+      'Cut ML labeling costs by 75% via a synthetic data pipeline',
+      'Shipped a full-stack object detection platform end to end'
+    ]
+  },
+  {
     id: 'microsoft-swe-intern',
     title: 'Summer SWE Intern',
     company: 'Microsoft',
@@ -25,16 +68,16 @@ const experienceData: ExperienceItem[] = [
     duration: 'May 2023 - June 2023',
     period: '2 months',
     description: [
-      'Integrated AI capabilities in Microsoft Defender using advanced GPT models',
-      'Collaborated across multiple teams to enhance security threat detection',
-      'Deployed production-ready code for Microsoft employees worldwide',
-      'Reduced system failure rate through intelligent AI model implementation'
+      'Built an AI-powered phishing payload generator for Microsoft Defender for Office 365',
+      'Engineered a resilient dual-GPT pipeline via Augloop for fallback reliability',
+      'Automated evaluation of generated payloads to enhance security threat detection',
+      'Deployed production-ready code for Microsoft employees worldwide'
     ],
-    technologies: ['AI/ML', 'GPT Models', 'Microsoft Defender', 'Python', 'Azure', 'Security APIs'],
+    technologies: ['AI/ML', 'GPT Models', 'Augloop', 'Microsoft Defender', 'Python', 'Azure', 'Security APIs'],
     achievements: [
-      'Reduced AI model failure rate to 10% through optimization',
-      'Deployed code reaching 200K+ Microsoft employees',
-      'Enhanced threat detection capabilities using 2 GPT models'
+      'Delivered a dual-GPT phishing payload generator for Defender for Office 365',
+      'Improved fallback reliability through a resilient dual-model pipeline',
+      'Deployed code reaching 200K+ Microsoft employees'
     ]
   },
   {
@@ -173,8 +216,9 @@ export default function Experience() {
             </h2>
           </div>
           <p className="text-xl text-asteroid-gray max-w-2xl mx-auto">
-            From AI integration at Microsoft to cybersecurity research, showcasing expertise 
-            in software engineering, machine learning, and security technologies
+            From building high-throughput cloud infrastructure at Microsoft Defender for Cloud Apps
+            to AI, distributed systems, and security research, showcasing expertise across backend
+            engineering, cloud platforms, and applied machine learning
           </p>
         </motion.div>
 
@@ -305,10 +349,10 @@ export default function Experience() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           {[
-            { label: 'Microsoft Roles', value: '2', icon: Calendar },
-            { label: 'AI Models Integrated', value: '2', icon: Rocket },
-            { label: 'Users Reached', value: '200K+', icon: Award },
-            { label: 'Websites Tested', value: '10+', icon: MapPin }
+            { label: 'Daily Active Users', value: '45K+', icon: Calendar },
+            { label: 'Prod Data Migrated', value: '500GB+', icon: Rocket },
+            { label: 'Cosmos Read Overhead Cut', value: '92%', icon: Award },
+            { label: 'Apps in Catalog API', value: '31K+', icon: MapPin }
           ].map((stat, index) => (
             <motion.div
               key={index}
