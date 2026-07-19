@@ -211,7 +211,7 @@ export default function Experience() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <Rocket className="text-stellar-purple w-8 h-8" />
-            <h2 className="text-4xl md:text-5xl font-bold text-star-white font-['Orbitron']">
+            <h2 className="text-4xl md:text-5xl font-bold text-star-white font-['Space_Grotesk']">
               Professional Journey
             </h2>
           </div>
@@ -268,7 +268,7 @@ export default function Experience() {
                         <span className="text-solar-gold text-sm font-medium">{item.duration}</span>
                         <span className="text-asteroid-gray text-sm">({item.period})</span>
                       </div>
-                      <h3 className="text-xl font-bold text-star-white font-['Orbitron'] mb-1">
+                      <h3 className="text-xl font-bold text-star-white font-['Space_Grotesk'] mb-1">
                         {item.title}
                       </h3>
                       <div className="flex items-center gap-2 text-stellar-purple">
@@ -363,7 +363,7 @@ export default function Experience() {
               }}
             >
               <stat.icon className="text-stellar-purple w-8 h-8 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-star-white font-['Orbitron'] mb-1">
+              <div className="text-3xl font-bold text-star-white font-['Space_Grotesk'] mb-1">
                 {stat.value}
               </div>
               <div className="text-asteroid-gray text-sm">{stat.label}</div>

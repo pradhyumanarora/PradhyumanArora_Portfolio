@@ -392,7 +392,7 @@ export default function Skills() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <Star className="text-stellar-purple w-8 h-8" />
-            <h2 className="text-4xl md:text-5xl font-bold text-star-white font-['Orbitron']">
+            <h2 className="text-4xl md:text-5xl font-bold text-star-white font-['Space_Grotesk']">
               Skills &amp; Technologies
             </h2>
           </div>
@@ -572,7 +572,7 @@ export default function Skills() {
                     <selectedSkill.icon className="text-white w-8 h-8" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-star-white font-['Orbitron'] mb-1">
+                    <h3 className="text-2xl font-bold text-star-white font-['Space_Grotesk'] mb-1">
                       {selectedSkill.label}
                     </h3>
                     <p className="text-asteroid-gray text-sm mb-2">

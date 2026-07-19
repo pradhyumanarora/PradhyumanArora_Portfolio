@@ -24,7 +24,7 @@ const config: Config = {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
-        display: ['Orbitron', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
       },
       fontSize: {
         'hero': ['4rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
