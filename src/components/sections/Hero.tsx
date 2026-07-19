@@ -108,7 +108,7 @@ export default function Hero() {
             </motion.button>
 
             <motion.a
-              href="/resume.pdf"
+              href={`${process.env.NODE_ENV === 'production' ? '/PradhyumanArora_Portfolio' : ''}/resume.pdf`}
               download="Pradhyuman_Arora_Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
