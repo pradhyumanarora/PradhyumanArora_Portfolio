@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react'
 
 const TYPEWRITER_TEXTS = [
   'Software Engineer',
@@ -106,6 +106,17 @@ export default function Hero() {
             >
               Get in Touch
             </motion.button>
+
+            <motion.a
+              href="/resume.pdf"
+              download="Pradhyuman_Arora_Resume.pdf"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 border-2 border-stellar-purple text-stellar-purple font-semibold rounded-lg hover:bg-stellar-purple hover:text-star-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-stellar-purple focus:ring-offset-2 focus:ring-offset-deep-space flex items-center gap-2"
+            >
+              <Download className="w-5 h-5" />
+              Download Resume
+            </motion.a>
           </motion.div>
 
           {/* Social Links */}
