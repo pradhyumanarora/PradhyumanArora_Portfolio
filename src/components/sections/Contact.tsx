@@ -72,15 +72,27 @@ export default function Contact() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    
+
     if (!validateForm()) return
-    
+
     setIsSubmitting(true)
-    
+
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
+      const recipient = 'pradhyumanarora@gmail.com'
+      const subject = formData.subject.trim() || `Portfolio inquiry from ${formData.name}`
+      const bodyLines = [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        ...(formData.company.trim() ? [`Company: ${formData.company}`] : []),
+        `Priority: ${formData.priority}`,
+        '',
+        formData.message,
+      ]
+      const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`
+
+      // Open the visitor's email client with the message pre-filled
+      window.location.href = mailtoUrl
+
       setSubmitStatus('success')
       setFormData({
         name: '',
@@ -229,7 +241,7 @@ export default function Contact() {
                     className="mb-6 p-4 bg-green-400/10 border border-green-400/30 rounded-lg flex items-center gap-3"
                   >
                     <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-green-400">Thanks for reaching out! I'll get back to you soon.</span>
+                    <span className="text-green-400">Your email client should open with the message ready to send.</span>
                   </motion.div>
                 )}
 
