@@ -99,46 +99,6 @@ const experienceData: ExperienceItem[] = [
       'Achieved 85% accuracy in facial expression detection',
       'Successfully integrated ML models with web application'
     ]
-  },
-  {
-    id: 'vit-research-intern',
-    title: 'Research Intern',
-    company: 'Vellore Institute of Technology, Chennai',
-    location: 'Chennai, India',
-    duration: 'June 2022 - July 2022',
-    period: '2 months',
-    description: [
-      'Designed innovative Graphical Password Authentication system for accessibility',
-      'Implemented multi-level authentication system for enhanced security',
-      'Conducted research on accessibility solutions for color blind users',
-      'Developed Django-based secure authentication framework'
-    ],
-    technologies: ['Django', 'Python', 'Authentication Systems', 'Accessibility', 'Security', 'Research'],
-    achievements: [
-      'Designed Graphical Password Authentication for Color Blind users',
-      'Implemented 3 Level Authentication system',
-      'Enhanced security protocols for accessible applications'
-    ]
-  },
-  {
-    id: 'talakunchi-cybersecurity',
-    title: 'Industrial Program on Cyber Security',
-    company: 'TalaKunchi Networks Pvt Ltd',
-    location: 'India',
-    duration: 'Feb 2022 - Apr 2022',
-    period: '3 months',
-    description: [
-      'Conducted comprehensive penetration testing on web applications',
-      'Utilized industry-standard security testing tools and frameworks',
-      'Performed vulnerability assessments and security audits',
-      'Mastered advanced penetration testing methodologies'
-    ],
-    technologies: ['Nmap', 'Burp Suite', 'OWASP ZAP', 'Metasploit', 'Penetration Testing', 'Security Auditing'],
-    achievements: [
-      'Performed penetration testing on 10+ websites',
-      'Mastered Nmap and Metasploit Framework effectively',
-      'Successfully exploited server vulnerabilities for security assessment'
-    ]
   }
 ];
 
@@ -217,8 +177,7 @@ export default function Experience() {
           </div>
           <p className="text-xl text-asteroid-gray max-w-2xl mx-auto">
             Two years building production cloud infrastructure and security products at
-            Microsoft, with earlier work spanning full-stack development, applied AI, and
-            security research.
+            Microsoft, with earlier work spanning full-stack development and applied AI.
           </p>
         </motion.div>
 
